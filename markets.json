@@ -1,0 +1,794 @@
+[
+  {
+    "id": 40,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "itctokens321",
+      "symbol": { "name": "WAXXLM", "precision": 7 },
+      "str": "WAXXLM@itctokens321"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.0000001 WAXXLM",
+    "frozen": 0,
+    "last_price": 3,
+    "volume24": 288.4488055,
+    "volumeWeek": 1082.47302512,
+    "volumeMonth": 1082.47302512,
+    "change24": -78.32354280016473,
+    "changeWeek": 29602.94088817734
+  },
+  {
+    "id": 39,
+    "base_token": {
+      "contract": "eth.token",
+      "symbol": { "name": "WAXUSDT", "precision": 6 },
+      "str": "WAXUSDT@eth.token"
+    },
+    "quote_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "min_buy": "0.000001 WAXUSDT",
+    "min_sell": "0.00000001 WAX",
+    "frozen": 0,
+    "last_price": 0.19,
+    "volume24": 619.094508,
+    "volumeWeek": 1421.830673,
+    "volumeMonth": 1421.830673,
+    "change24": 33.991537376586734,
+    "changeWeek": -9.952606635071087
+  },
+  {
+    "id": 38,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "babe.hodl",
+      "symbol": { "name": "BABE", "precision": 0 },
+      "str": "BABE@babe.hodl"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "1 BABE",
+    "frozen": 0,
+    "last_price": 0.2189,
+    "volume24": 109.64559990000001,
+    "volumeWeek": 2992.78043999,
+    "volumeMonth": 7015.59153438,
+    "change24": -0.49995477270670896,
+    "changeWeek": 12.256410256410257
+  },
+  {
+    "id": 37,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "purplepurple",
+      "symbol": { "name": "PURPLE", "precision": 8 },
+      "str": "PURPLE@purplepurple"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.00000001 PURPLE",
+    "frozen": 0,
+    "last_price": 19.99,
+    "volume24": 860.8262685899999,
+    "volumeWeek": 11293.43116865,
+    "volumeMonth": 13264.73703994,
+    "change24": 0.050050050050040096,
+    "changeWeek": -44.47222222222222
+  },
+  {
+    "id": 36,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "bluxbluxblux",
+      "symbol": { "name": "BLUX", "precision": 0 },
+      "str": "BLUX@bluxbluxblux"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "1 BLUX",
+    "frozen": 0,
+    "last_price": 0.01509927,
+    "volume24": 400.65814223,
+    "volumeWeek": 8755.64545034,
+    "volumeMonth": 10088.63536613,
+    "change24": -49.66742224740825,
+    "changeWeek": -5.629562500000004
+  },
+  {
+    "id": 35,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "onessusonwax",
+      "symbol": { "name": "VOID", "precision": 4 },
+      "str": "VOID@onessusonwax"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.0001 VOID",
+    "frozen": 0,
+    "last_price": 0.00051,
+    "volume24": 16789.81667953,
+    "volumeWeek": 160629.88896487,
+    "volumeMonth": 302690.5379154,
+    "change24": -3.7735849056603668,
+    "changeWeek": 96.16139082272397
+  },
+  {
+    "id": 34,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "digdougrocks",
+      "symbol": { "name": "ROCKS", "precision": 0 },
+      "str": "ROCKS@digdougrocks"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "1 ROCKS",
+    "frozen": 0,
+    "last_price": 0.0299999,
+    "volume24": 60.3297427,
+    "volumeWeek": 706.85845954,
+    "volumeMonth": 707.97398646,
+    "change24": 0,
+    "changeWeek": 172.7236363999996
+  },
+  {
+    "id": 33,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "wareplaycoin",
+      "symbol": { "name": "WPG", "precision": 4 },
+      "str": "WPG@wareplaycoin"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.0001 WPG",
+    "frozen": 0,
+    "last_price": 0,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 32,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "kingofquotes",
+      "symbol": { "name": "KOQ", "precision": 8 },
+      "str": "KOQ@kingofquotes"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.00000001 KOQ",
+    "frozen": 0,
+    "last_price": 0,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 31,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "kolobokbucks",
+      "symbol": { "name": "KBUCKS", "precision": 4 },
+      "str": "KBUCKS@kolobokbucks"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.0001 KBUCKS",
+    "frozen": 0,
+    "last_price": 0.023,
+    "volume24": 2987.06624881,
+    "volumeWeek": 16561.89669429,
+    "volumeMonth": 20486.78720407,
+    "change24": -19.298245614035093,
+    "changeWeek": 233.33333333333334
+  },
+  {
+    "id": 29,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "e.rplanet",
+      "symbol": { "name": "AETHER", "precision": 4 },
+      "str": "AETHER@e.rplanet"
+    },
+    "min_buy": "0.00000001 WAX",
+    "min_sell": "0.0001 AETHER",
+    "frozen": 0,
+    "last_price": 0.00095,
+    "volume24": 756817.1960061,
+    "volumeWeek": 3813127.94437641,
+    "volumeMonth": 6046493.86047245,
+    "change24": -1.9506657033749584,
+    "changeWeek": 91.72552976791121
+  },
+  {
+    "id": 28,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "pack.worlds",
+      "symbol": { "name": "LAND", "precision": 0 },
+      "str": "LAND@pack.worlds"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 LAND",
+    "frozen": 0,
+    "last_price": 15000,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 15000,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 27,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "pack.worlds",
+      "symbol": { "name": "RARE", "precision": 0 },
+      "str": "RARE@pack.worlds"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 RARE",
+    "frozen": 0,
+    "last_price": 2000,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 7000,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 26,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "alien.worlds",
+      "symbol": { "name": "TLM", "precision": 4 },
+      "str": "TLM@alien.worlds"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.0001 TLM",
+    "frozen": 0,
+    "last_price": 1.4,
+    "volume24": 972501.23678124,
+    "volumeWeek": 12770998.94645594,
+    "volumeMonth": 57955610.63977149,
+    "change24": 5.08853788132905,
+    "changeWeek": -25.53190023766122
+  },
+  {
+    "id": 25,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "pack.worlds",
+      "symbol": { "name": "PROMO", "precision": 0 },
+      "str": "PROMO@pack.worlds"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 PROMO",
+    "frozen": 0,
+    "last_price": 2999,
+    "volume24": 0,
+    "volumeWeek": 2999,
+    "volumeMonth": 18638.999,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 24,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "pack.worlds",
+      "symbol": { "name": "BASE", "precision": 0 },
+      "str": "BASE@pack.worlds"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 BASE",
+    "frozen": 0,
+    "last_price": 1400,
+    "volume24": 0,
+    "volumeWeek": 1400,
+    "volumeMonth": 7945,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 23,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "GPKTWOC", "precision": 0 },
+      "str": "GPKTWOC@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 GPKTWOC",
+    "frozen": 0,
+    "last_price": 235,
+    "volume24": 0,
+    "volumeWeek": 2590,
+    "volumeMonth": 2835,
+    "change24": 0,
+    "changeWeek": -2.083333333333333
+  },
+  {
+    "id": 22,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "GPKTWOA", "precision": 0 },
+      "str": "GPKTWOA@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 GPKTWOA",
+    "frozen": 0,
+    "last_price": 38.37,
+    "volume24": 0,
+    "volumeWeek": 326.055,
+    "volumeMonth": 326.055,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 21,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "GPKTWOB", "precision": 0 },
+      "str": "GPKTWOB@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 GPKTWOB",
+    "frozen": 0,
+    "last_price": 65.4,
+    "volume24": 0,
+    "volumeWeek": 405.8,
+    "volumeMonth": 405.8,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 20,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "visionfintec",
+      "symbol": { "name": "RED", "precision": 0 },
+      "str": "RED@visionfintec"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 RED",
+    "frozen": 0,
+    "last_price": 60,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 60,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 19,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "niftywizards",
+      "symbol": { "name": "DUST", "precision": 4 },
+      "str": "DUST@niftywizards"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.0001 DUST",
+    "frozen": 0,
+    "last_price": 0.03192,
+    "volume24": 10271.56621685,
+    "volumeWeek": 163495.62836433,
+    "volumeMonth": 239035.14339325,
+    "change24": 22.773763954361375,
+    "changeWeek": 99.49862844692939
+  },
+  {
+    "id": 18,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "prospectorsw",
+      "symbol": { "name": "PSS", "precision": 0 },
+      "str": "PSS@prospectorsw"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 PSS",
+    "frozen": 0,
+    "last_price": 0,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 17,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.ws",
+      "symbol": { "name": "WSFIVE", "precision": 0 },
+      "str": "WSFIVE@packs.ws"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 WSFIVE",
+    "frozen": 0,
+    "last_price": 110,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 1019.99999975,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 16,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.ws",
+      "symbol": { "name": "WSMEGA", "precision": 0 },
+      "str": "WSMEGA@packs.ws"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 WSMEGA",
+    "frozen": 0,
+    "last_price": 400,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 1700,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 15,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "EXOMEGA", "precision": 0 },
+      "str": "EXOMEGA@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 EXOMEGA",
+    "frozen": 0,
+    "last_price": 380,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 14,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "EXOFIVE", "precision": 0 },
+      "str": "EXOFIVE@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 EXOFIVE",
+    "frozen": 0,
+    "last_price": 37,
+    "volume24": 0,
+    "volumeWeek": 37,
+    "volumeMonth": 297.90000000000003,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 13,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "weosdttokens",
+      "symbol": { "name": "WEOSDT", "precision": 9 },
+      "str": "WEOSDT@weosdttokens"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.000000001 WEOSDT",
+    "frozen": 0,
+    "last_price": 0,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 12,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "moo.cow",
+      "symbol": { "name": "MOO", "precision": 8 },
+      "str": "MOO@moo.cow"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.00000001 MOO",
+    "frozen": 0,
+    "last_price": 0.181,
+    "volume24": 1.39320507,
+    "volumeWeek": 16.30844246,
+    "volumeMonth": 1853.77919422,
+    "change24": -72.53414264036418,
+    "changeWeek": -73.38235294117648
+  },
+  {
+    "id": 11,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "openbrmwax11",
+      "symbol": { "name": "BRM", "precision": 4 },
+      "str": "BRM@openbrmwax11"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.0001 BRM",
+    "frozen": 0,
+    "last_price": 0,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 6,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "token.rich",
+      "symbol": { "name": "RICH", "precision": 8 },
+      "str": "RICH@token.rich"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.00000001 RICH",
+    "frozen": 0,
+    "last_price": 1.99,
+    "volume24": 88450.90879298,
+    "volumeWeek": 410201.4634522,
+    "volumeMonth": 410681.6850193,
+    "change24": 25.15723270440251,
+    "changeWeek": 468.57141232653106
+  },
+  {
+    "id": 5,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "betdividends",
+      "symbol": { "name": "BET", "precision": 4 },
+      "str": "BET@betdividends"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.0001 BET",
+    "frozen": 0,
+    "last_price": 0.699999,
+    "volume24": 309.28044114,
+    "volumeWeek": 3170.47619937,
+    "volumeMonth": 3702.12545274,
+    "change24": -0.0001428571428453905,
+    "changeWeek": -30.000099999999996
+  },
+  {
+    "id": 4,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "theonlykarma",
+      "symbol": { "name": "KARMA", "precision": 4 },
+      "str": "KARMA@theonlykarma"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.0001 KARMA",
+    "frozen": 0,
+    "last_price": 0.0005,
+    "volume24": 44.28952562,
+    "volumeWeek": 1999.43303494,
+    "volumeMonth": 3695.92908381,
+    "change24": 2.0408163265306176,
+    "changeWeek": 0
+  },
+  {
+    "id": 3,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "GPKMEGA", "precision": 0 },
+      "str": "GPKMEGA@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 GPKMEGA",
+    "frozen": 0,
+    "last_price": 7200,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 2,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "packs.topps",
+      "symbol": { "name": "GPKFIVE", "precision": 0 },
+      "str": "GPKFIVE@packs.topps"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "1 GPKFIVE",
+    "frozen": 0,
+    "last_price": 1250,
+    "volume24": 0,
+    "volumeWeek": 0,
+    "volumeMonth": 0,
+    "change24": 0,
+    "changeWeek": 0
+  },
+  {
+    "id": 1,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "wtixtokenblo",
+      "symbol": { "name": "WTIX", "precision": 8 },
+      "str": "WTIX@wtixtokenblo"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.00000001 WTIX",
+    "frozen": 0,
+    "last_price": 0.7799,
+    "volume24": 39.63342893,
+    "volumeWeek": 198.99080813,
+    "volumeMonth": 2129.31761661,
+    "change24": -2.512500000000001,
+    "changeWeek": 159.96660600779194
+  },
+  {
+    "id": 0,
+    "base_token": {
+      "contract": "eosio.token",
+      "symbol": { "name": "WAX", "precision": 8 },
+      "str": "WAX@eosio.token"
+    },
+    "quote_token": {
+      "contract": "prospectorsw",
+      "symbol": { "name": "PGL", "precision": 4 },
+      "str": "PGL@prospectorsw"
+    },
+    "min_buy": "0.00000100 WAX",
+    "min_sell": "0.0001 PGL",
+    "frozen": 0,
+    "last_price": 0.19399,
+    "volume24": 3654.6340866,
+    "volumeWeek": 38578.46830788,
+    "volumeMonth": 56863.96658921,
+    "change24": -11.621867881548976,
+    "changeWeek": -7.623418023057332
+  }
+]

@@ -37,7 +37,6 @@
   }
 }
 
-
 .card {
   box-shadow: 0px 0px 5px #757373;
   /*border: 1px solid #ccc;*/
@@ -116,7 +115,6 @@
     font-size: 1rem;
   }
 }
-
 
 .card__box_animation {
   animation-duration: 1s;
