@@ -10,6 +10,8 @@ import RateForm from "../components/RateForm"
 import AsyncManager from "../components/AsyncManager"
 import { useAssets, ApiAsset } from "../dal/atomic"
 import NFT from "../components/NFT"
+import { useSales, Sale } from "../dal/atomicmarket"
+import AssetSale from "../components/AssetSale"
 
 export interface IData {
   data: {
@@ -23,9 +25,13 @@ export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
       <SEO />
-      <AsyncManager queries={[useGetMarketAll(), useAssets()]}>
-        {([marketData, assets]) => (
-          <Content marketData={marketData} assets={assets} />
+      <AsyncManager queries={[useGetMarketAll(), useAssets(), useSales({
+        collection: 'alien.worlds',
+        page: 1,
+        limit: 40
+      })]}>
+        {([marketData, assets, sales]) => (
+          <Content marketData={marketData} assets={assets} sales={sales} />
         )}
       </AsyncManager>
     </Layout>
@@ -35,6 +41,7 @@ export default function Index(props: PageProps<IData>) {
 function Content(props: {
   marketData: Array<IMarketData>
   assets: Array<ApiAsset>
+  sales: Array<Sale>
 }): JSX.Element {
   const aether = getAetherInUSDT(props.marketData) || 0
   const wax = getWaxInUSDT(props.marketData)?.last_price || 0
@@ -63,13 +70,23 @@ function Content(props: {
         </Col>
       </Row>
 
+      <h1>Sales</h1>
+
       <Row gutter={10}>
+        {props.sales.map(sale => (
+          <Col>
+            <AssetSale key={sale.sale_id} sale={sale} />
+          </Col>
+        ))}
+      </Row>
+
+      {/* <Row gutter={10}>
         {props.assets.map(asset => (
           <Col>
             <NFT key={asset.asset_id} asset={asset} />
           </Col>
         ))}
-      </Row>
+      </Row> */}
     </>
   )
 }

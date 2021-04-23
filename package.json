@@ -8,6 +8,7 @@
     "@ant-design/icons": "^4.6.2",
     "antd": "^4.15.2",
     "atomicassets": "^1.2.2",
+    "atomicmarket": "^0.1.1",
     "cheerio": "^1.0.0-rc.3",
     "cross-fetch": "^3.1.4",
     "gatsby": "^2.24.85",
