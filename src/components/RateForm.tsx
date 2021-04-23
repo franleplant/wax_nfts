@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
+import { Form, InputNumber, Button, Radio, Card } from "antd"
 
 export interface IForm {
   quote: number | undefined
@@ -7,31 +8,46 @@ export interface IForm {
 
 export interface IProps {
   rate: number
+  quoteLabel: string
+  baseLabel: string
 }
 
-export default function RateForm({ rate }: IProps): JSX.Element {
+export default function RateForm({
+  rate,
+  quoteLabel,
+  baseLabel,
+}: IProps): JSX.Element {
   const [form, setForm] = useState<IForm>({ quote: rate, base: 1 })
 
-  function onQuoteChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    const quote = Number(e.target.value)
+  function onQuoteChange(quote: number): void {
     const base = quote / rate
     setForm({ quote, base })
   }
 
-  function onBaseChange(e: React.ChangeEvent<HTMLInputElement>): void {
-    const base = Number(e.target.value)
+  function onBaseChange(base: number): void {
     const quote = base * rate
     setForm({ quote, base })
   }
 
   return (
-    <form>
-      <label>
-        <input type="number" value={form.quote} onChange={onQuoteChange} />
-        <span> AETHER </span>
-      </label>
-      <input type="number" value={form.base} onChange={onBaseChange} />
-      <span> USDT </span>
-    </form>
+    <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
+      <Form.Item label={quoteLabel}>
+        <InputNumber
+          style={{ width: "100%" }}
+          value={form.quote}
+          onChange={onQuoteChange}
+          precision={9}
+        />
+      </Form.Item>
+
+      <Form.Item label={baseLabel}>
+        <InputNumber
+          style={{ width: "100%" }}
+          value={form.base}
+          onChange={onBaseChange}
+          precision={9}
+        />
+      </Form.Item>
+    </Form>
   )
 }

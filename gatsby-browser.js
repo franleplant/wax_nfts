@@ -4,10 +4,12 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 
-const React = require("react")
-const Layout = require("./src/components/Layout").default
+import "antd/dist/antd.css"
+
+import React from "react"
+import AppWrapper from "./src/components/AppWrapper"
 
 // Wraps every page in a component
-exports.wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
+export function wrapPageElement({ element, props }) {
+  return <AppWrapper {...props}>{element}</AppWrapper>
 }

@@ -1,27 +1,16 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { QueryClient, QueryClientProvider } from "react-query"
+import { Layout } from "antd"
+const { Header, Footer, Sider, Content } = Layout
 
-import "./base.css"
 import "./main.css"
 
-import Header from "./Header"
-
-const queryClient = new QueryClient()
-
-export default function Layout({ children }: any) {
+export default function CustomLayout({ children }: any) {
   return (
-    <>
-      <div>
-        {/*
-        <Header />
-          */}
-        <QueryClientProvider client={queryClient}>
-          <main>{children}</main>
-        </QueryClientProvider>
-        <footer> </footer>
-      </div>
-    </>
+    <Layout>
+      <Header>NFT!</Header>
+      <Content className="content">{children}</Content>
+      <Footer></Footer>
+    </Layout>
   )
 }

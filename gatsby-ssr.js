@@ -4,9 +4,12 @@
  * See: https://www.gatsbyjs.com/docs/ssr-apis/
  */
 
-const React = require("react")
-const Layout = require("./src/components/Layout").default
+import "antd/dist/antd.css"
 
-exports.wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
+import React from "react"
+import AppWrapper from "./src/components/AppWrapper"
+
+// Wraps every page in a component
+export function wrapPageElement({ element, props }) {
+  return <AppWrapper {...props}>{element}</AppWrapper>
 }
