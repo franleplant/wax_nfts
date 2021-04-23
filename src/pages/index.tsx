@@ -21,7 +21,7 @@ export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
       <SEO />
-      <AsyncManager<[Array<IMarketData>]> queries={[useGetMarketAll()]}>
+      <AsyncManager queries={[useGetMarketAll()]}>
         {([marketData]) => <Content price={calcAetherUSDT(marketData)} />}
       </AsyncManager>
     </Layout>

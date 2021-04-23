@@ -8,14 +8,25 @@ interface IProps<TLoadedData extends Array<unknown>> {
   isEmpty?: (loadedData: TLoadedData) => boolean
   renderLoading?: () => JSX.Element
   renderEmpty?: () => JSX.Element
-  // TODO can I infere this type and apply to the rest?
-  queries: Array<UseQueryResult>
+  queries: { [Index in keyof TLoadedData]: UseQueryResult<TLoadedData[Index]> }
   children: (loadedData: TLoadedData) => JSX.Element
 }
 
 // Simple container wrapper that knows how to deal with loading states and such.
 // More features can and probably will be added to this such as handling error and
 // other states too
+export default function AsyncManager<
+  T1,
+  T2,
+  T3,
+  TLoadedData extends [T1, T2, T3]
+>(props: IProps<TLoadedData>): JSX.Element
+export default function AsyncManager<T1, T2, TLoadedData extends [T1, T2]>(
+  props: IProps<TLoadedData>
+): JSX.Element
+export default function AsyncManager<T1, TLoadedData extends [T1]>(
+  props: IProps<TLoadedData>
+): JSX.Element
 export default function AsyncManager<TLoadedData extends Array<unknown>>(
   props: IProps<TLoadedData>
 ): JSX.Element {
