@@ -5,6 +5,7 @@ import { IMarketData } from "../dal/market"
 const WAX_USDT = "WAX@eosio.token"
 const AETHER_WAX = "AETHER@e.rplanet"
 
+// Aether priced in usdt
 export function calcAetherUSDT(marketData: Array<IMarketData>): number {
   // the price of wax in dollars
   const waxUSDT = marketData.find(market => market.quote_token.str === WAX_USDT)

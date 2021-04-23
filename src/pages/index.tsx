@@ -3,6 +3,8 @@ import { PageProps, Link, graphql } from "gatsby"
 import SEO from "../components/seo"
 import { useGetMarketAll } from "../dal/market"
 import { calcAetherUSDT } from "../domain/market"
+import Price from "../components/Price"
+import RateForm from "../components/RateForm"
 
 export interface IData {
   data: {
@@ -18,7 +20,16 @@ export default function Index(props: PageProps<IData>) {
   return (
     <div>
       <SEO />
-      {isLoading ? "loading..." : `${calcAetherUSDT(data)} AETHER / USDT`}
+      {isLoading ? "loading..." : <Content price={calcAetherUSDT(data)} />}
+    </div>
+  )
+}
+
+function Content(props: { price: number }): JSX.Element {
+  return (
+    <div>
+      <Price price={props.price} />
+      <RateForm rate={1 / props.price} />
     </div>
   )
 }
