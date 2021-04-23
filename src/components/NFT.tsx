@@ -15,13 +15,13 @@ export default function NFT(props: IProps): JSX.Element {
       style={{ width: 270 }}
       cover={
         <img
-          src={`https://resizer.atomichub.io/images/v1/preview?ipfs=${asset.data?.img}&size=370`}
+          src={`https://ipfs.io/ipfs/${asset.data?.img}`}
           width={270}
         />
       }
     >
       <Card.Meta
-        title={asset.name}
+        title={<a href='#'>asset.name</a>}
         description={`collection ${asset.collection.name}`}
       ></Card.Meta>
     </Card>
