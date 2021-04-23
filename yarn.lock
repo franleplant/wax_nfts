@@ -2613,6 +2613,14 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
+atomicassets@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/atomicassets/-/atomicassets-1.2.2.tgz#789a9fc91d489150ff95f5884cc73bef72165d92"
+  integrity sha512-ymPdl2s9ig8w0IMsSMrXWQ2lJqJdg/pR+k6tmVitJi8r1RiRmbXdozYjv9CLzPkmRPZ6nUHgnelOmXd0KFXnXA==
+  dependencies:
+    big-integer "^1.6.48"
+    pure-cache "^1.0.5"
+
 autoprefixer@^9.8.4:
   version "9.8.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.6.tgz#3b73594ca1bf9266320c5acf1588d74dea74210f"
@@ -2885,7 +2893,7 @@ better-queue@^3.8.10:
     node-eta "^0.9.0"
     uuid "^3.0.0"
 
-big-integer@^1.6.16:
+big-integer@^1.6.16, big-integer@^1.6.48:
   version "1.6.48"
   resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.48.tgz#8fd88bd1632cba4a1c8c3e3d7159f08bb95b4b9e"
   integrity sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w==
@@ -11286,6 +11294,13 @@ pupa@^2.1.1:
   integrity sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==
   dependencies:
     escape-goat "^2.0.0"
+
+pure-cache@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/pure-cache/-/pure-cache-1.0.5.tgz#870c1e9f289de01c27cec42ffb4950d48386dcad"
+  integrity sha512-DH42Hwq0wHzQczXM6f4wZe4o0hvBomF8ef2hBFYEFeOt/tfycDK3n14oJEftx/nrk8ZJaaI0ZPv3z7uBTb3DuA==
+  dependencies:
+    mitt "^1.2.0"
 
 q@^1.1.2:
   version "1.5.1"
