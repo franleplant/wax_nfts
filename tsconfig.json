@@ -6,7 +6,6 @@
     "jsx": "preserve",
     "strict": true,
     "noImplicitAny": true,
-    "strictNullChecks": false,
     "strictFunctionTypes": true,
     "noImplicitThis": true,
     "alwaysStrict": true,

@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { Statistic } from "antd"
 
 export interface IProps {
   price: number
+  quoteLabel: string
+  baseLabel: string
 }
 
 export default function Price(props: IProps): JSX.Element {
+  const price = props.price
   return (
-    <div>
-      <div title="the price of aether in usdt">{`${props.price} AETHER / USDT`}</div>
-      <div title="the price of usdt in aether">{`${
-        1 / props.price
-      } USDT / AETHER`}</div>
-    </div>
+    <Statistic
+      title={`${props.quoteLabel} / ${props.baseLabel}`}
+      value={price}
+      precision={8}
+      valueStyle={{ color: "#0000FF" }}
+      style={{ maxWidth: "350px", textAlign: "center" }}
+    />
   )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { Form, InputNumber, Button, Radio, Card } from "antd"
+import { Form, InputNumber } from "antd"
+import { ArrowDownOutlined } from "@ant-design/icons"
 
 export interface IForm {
   quote: number | undefined
@@ -17,15 +18,15 @@ export default function RateForm({
   quoteLabel,
   baseLabel,
 }: IProps): JSX.Element {
-  const [form, setForm] = useState<IForm>({ quote: rate, base: 1 })
+  const [form, setForm] = useState<IForm>({ base: rate, quote: 1 })
 
   function onQuoteChange(quote: number): void {
-    const base = quote / rate
+    const base = quote * rate
     setForm({ quote, base })
   }
 
   function onBaseChange(base: number): void {
-    const quote = base * rate
+    const quote = base / rate
     setForm({ quote, base })
   }
 
@@ -39,6 +40,13 @@ export default function RateForm({
           precision={9}
         />
       </Form.Item>
+
+      <div style={{ textAlign: "center", paddingBottom: "20px" }}>
+        <ArrowDownOutlined
+          twoToneColor="#eb2f96"
+          style={{ fontSize: "30px" }}
+        />
+      </div>
 
       <Form.Item label={baseLabel}>
         <InputNumber

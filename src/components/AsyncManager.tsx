@@ -20,16 +20,16 @@ export default function AsyncManager<
   T2,
   T3,
   TLoadedData extends [T1, T2, T3]
->(props: IProps<TLoadedData>): JSX.Element
+>(props: IProps<TLoadedData>): JSX.Element | null
 export default function AsyncManager<T1, T2, TLoadedData extends [T1, T2]>(
   props: IProps<TLoadedData>
-): JSX.Element
+): JSX.Element | null
 export default function AsyncManager<T1, TLoadedData extends [T1]>(
   props: IProps<TLoadedData>
-): JSX.Element
+): JSX.Element | null
 export default function AsyncManager<TLoadedData extends Array<unknown>>(
   props: IProps<TLoadedData>
-): JSX.Element {
+): JSX.Element | null {
   const {
     queries,
     renderLoading = defaultRenderLoading,

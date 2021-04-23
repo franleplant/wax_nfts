@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
 import { PageProps, Link, graphql } from "gatsby"
+import { Card, Row, Col } from "antd"
 import SEO from "../components/seo"
 import { useGetMarketAll, IMarketData } from "../dal/market"
-import { calcAetherUSDT } from "../domain/market"
+import { getAetherInUSDT, getWaxInUSDT } from "../domain/market"
 import Layout from "../components/Layout"
 import Price from "../components/Price"
 import RateForm from "../components/RateForm"
-import { Card } from "antd"
 import AsyncManager from "../components/AsyncManager"
 
 export interface IData {
@@ -22,20 +22,36 @@ export default function Index(props: PageProps<IData>) {
     <Layout>
       <SEO />
       <AsyncManager queries={[useGetMarketAll()]}>
-        {([marketData]) => <Content price={calcAetherUSDT(marketData)} />}
+        {([marketData]) => <Content marketData={marketData} />}
       </AsyncManager>
     </Layout>
   )
 }
 
-function Content(props: { price: number }): JSX.Element {
+function Content(props: { marketData: Array<IMarketData> }): JSX.Element {
+  const aether = getAetherInUSDT(props.marketData) || 0
+  const wax = getWaxInUSDT(props.marketData)?.last_price || 0
   return (
-    <div>
-      <Price price={props.price} />
-      <Card style={{ maxWidth: "350px" }} title="AETHER USDT pricing" bordered>
-        <RateForm rate={1 / props.price} quoteLabel="AETHER" baseLabel="USDT" />
-      </Card>
-    </div>
+    <Row justify="start" gutter={5}>
+      <Col>
+        <Card
+          bordered
+          style={{ maxWidth: "350px" }}
+          title={<Price price={aether} quoteLabel="AETHER" baseLabel="USDT" />}
+        >
+          <RateForm rate={aether} quoteLabel="AETHER" baseLabel="USDT" />
+        </Card>
+      </Col>
+      <Col>
+        <Card
+          bordered
+          style={{ maxWidth: "350px" }}
+          title={<Price price={wax} quoteLabel="WAX" baseLabel="USDT" />}
+        >
+          <RateForm rate={wax} quoteLabel="WAX" baseLabel="USDT" />
+        </Card>
+      </Col>
+    </Row>
   )
 }
 
