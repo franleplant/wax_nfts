@@ -1,10 +1,11 @@
 import { useQuery, UseQueryResult } from "react-query"
+import fetch from "cross-fetch"
 import { ExplorerApi } from "atomicassets"
 import { ApiAsset } from "atomicassets/build/API/Explorer/Types"
 
 const URL = "https://wax.api.atomicassets.io"
 const NAMESPACE = "atomicassets"
-const api = new ExplorerApi(URL, NAMESPACE, {})
+const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any })
 
 export { ApiAsset }
 
