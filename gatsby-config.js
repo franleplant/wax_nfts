@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/wax_nfts",
   siteMetadata: {
     title: `Dolar Blue | precio del dolar blue en tiempo real`,
     description: `Precio del Dolar Blue que es tasa de cambia entre el Peso Argentino y el Dolar Blue, Dolar Informal o Dolar Paralelo. Sin distracciones.`,
