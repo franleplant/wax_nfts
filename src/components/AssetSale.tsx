@@ -9,10 +9,10 @@ export interface IProps {
 export default function AssetSale(props: IProps): JSX.Element {
   const { sale } = props
 
-  // TODOs 
+  // TODOs
   // - handle multiple assets in one sale or ignore this type of sales
   // - develop utility function that gets AETH staking value
-  // - 
+  // -
 
   return (
     <Card
@@ -26,12 +26,25 @@ export default function AssetSale(props: IProps): JSX.Element {
       }
     >
       <Card.Meta
-        title={<a target='_blank' href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}>{sale.assets[0].name}</a>}
-        description={<ul>
-          <li>`Price: {sale.price.amount / Math.pow(10,sale.price.token_precision)} {sale.price.token_symbol}`</li>
-          <li>`Sale ID: {sale.sale_id}`</li>
-          <li>`Collection: {sale.collection.name}`</li>
-        </ul>}
+        title={
+          <a
+            target="_blank"
+            href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}
+          >
+            {sale.assets[0].name}
+          </a>
+        }
+        description={
+          <ul>
+            <li>
+              `Price:{" "}
+              {sale.price.amount / Math.pow(10, sale.price.token_precision)}{" "}
+              {sale.price.token_symbol}`
+            </li>
+            <li>`Sale ID: {sale.sale_id}`</li>
+            <li>`Collection: {sale.collection.name}`</li>
+          </ul>
+        }
       ></Card.Meta>
     </Card>
   )

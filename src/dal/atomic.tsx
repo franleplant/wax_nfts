@@ -1,5 +1,5 @@
-import { useQuery, UseQueryResult } from "react-query"
 import fetch from "cross-fetch"
+import { useQuery, UseQueryResult } from "react-query"
 import { ExplorerApi } from "atomicassets"
 import { ApiAsset } from "atomicassets/build/API/Explorer/Types"
 

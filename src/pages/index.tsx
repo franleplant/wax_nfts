@@ -25,11 +25,17 @@ export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
       <SEO />
-      <AsyncManager queries={[useGetMarketAll(), useAssets(), useSales({
-        collection: 'alien.worlds',
-        page: 1,
-        limit: 40
-      })]}>
+      <AsyncManager
+        queries={[
+          useGetMarketAll(),
+          useAssets(),
+          useSales({
+            collection: "alien.worlds",
+            page: 1,
+            limit: 40,
+          }),
+        ]}
+      >
         {([marketData, assets, sales]) => (
           <Content marketData={marketData} assets={assets} sales={sales} />
         )}

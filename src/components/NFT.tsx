@@ -14,14 +14,11 @@ export default function NFT(props: IProps): JSX.Element {
       hoverable
       style={{ width: 270 }}
       cover={
-        <img
-          src={`https://ipfs.io/ipfs/${asset.data?.img}`}
-          width={270}
-        />
+        <img src={`https://ipfs.io/ipfs/${asset.data?.img}`} width={270} />
       }
     >
       <Card.Meta
-        title={<a href='#'>asset.name</a>}
+        title={<a href="#">asset.name</a>}
         description={`collection ${asset.collection.name}`}
       ></Card.Meta>
     </Card>

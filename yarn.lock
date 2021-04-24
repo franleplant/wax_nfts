@@ -2626,6 +2626,11 @@ atomicassets@^1.2.2:
     big-integer "^1.6.48"
     pure-cache "^1.0.5"
 
+atomicmarket@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/atomicmarket/-/atomicmarket-0.1.1.tgz#c5ff65d1890c21a8e016aa3d997086e56fbe0537"
+  integrity sha512-a1RrTQ5mfRWNmtPgUAybU6F1om7vW8n1LFDoe9CfDUEpvg+3DM/LlWlzRewKyxGRCuq5ZwP7gmzCcVvMgEt1wQ==
+
 autoprefixer@^9.8.4:
   version "9.8.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.6.tgz#3b73594ca1bf9266320c5acf1588d74dea74210f"
