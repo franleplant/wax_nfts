@@ -29,15 +29,17 @@ export default function Index(props: PageProps<IData>) {
         queries={[
           useGetMarketAll(),
           useAssets(),
+          /*
           useSales({
             collection: "alien.worlds",
             page: 1,
             limit: 40,
           }),
+           */
         ]}
       >
-        {([marketData, assets, sales]) => (
-          <Content marketData={marketData} assets={assets} sales={sales} />
+        {([marketData, assets]) => (
+          <Content marketData={marketData} assets={assets} />
         )}
       </AsyncManager>
     </Layout>
@@ -47,7 +49,6 @@ export default function Index(props: PageProps<IData>) {
 function Content(props: {
   marketData: Array<IMarketData>
   assets: Array<ApiAsset>
-  sales: Array<Sale>
 }): JSX.Element {
   const aether = getAetherInUSDT(props.marketData) || 0
   const wax = getWaxInUSDT(props.marketData)?.last_price || 0
