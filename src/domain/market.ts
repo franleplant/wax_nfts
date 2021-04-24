@@ -16,13 +16,18 @@ export function getWaxInUSDT(
 export function getAetherInWax(
   marketData: Array<IMarketData>
 ): IMarketData | undefined {
-  return marketData.find(market => market.quote_token.str === AETHER_WAX)
+  return marketData.find(
+    market =>
+      market.quote_token.str === AETHER_WAX &&
+      market.base_token.str === "WAX@eosio.token"
+  )
 }
 
 // Aether priced in usdt
 export function getAetherInUSDT(marketData: Array<IMarketData>): number {
   const waxInUSDT = getWaxInUSDT(marketData)?.last_price || 0
   const aetherInWax = getAetherInWax(marketData)?.last_price || 0
+  console.log(getWaxInUSDT(marketData), getAetherInWax(marketData))
 
   const price = aetherInWax * waxInUSDT
 

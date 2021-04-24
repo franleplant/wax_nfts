@@ -77,7 +77,7 @@ function Content(props: {
       </Row>
 
       <h1>Sales</h1>
-
+      {/*
       <Row gutter={10}>
         {props.sales.map(sale => (
           <Col>
@@ -85,14 +85,14 @@ function Content(props: {
           </Col>
         ))}
       </Row>
-
-      {/* <Row gutter={10}>
+              */}
+      <Row gutter={10}>
         {props.assets.map(asset => (
           <Col>
             <NFT key={asset.asset_id} asset={asset} />
           </Col>
         ))}
-      </Row> */}
+      </Row>
     </>
   )
 }
