@@ -2,15 +2,16 @@ import fs from "fs"
 import fetch from "cross-fetch"
 import _ from "lodash"
 
+// TODO move to env
 const URL = "https://chain.wax.io/v1/chain/get_table_rows"
 
 export interface IResponse {
   next_key: string
   more: boolean
-  rows: Array<IStakableCollection>
+  rows: Array<ICollectionStakingSettings>
 }
 
-export interface IStakableCollection {
+export interface ICollectionStakingSettings {
   id: string
   contract: string
   author: string
@@ -18,6 +19,11 @@ export interface IStakableCollection {
   schema: string
   name_id: string
   img_id: string
+  /**
+   * the value of this key will be used to look for
+   * the rarity of the assets, by doing the following
+   * asset.data[rarity_id]
+   */
   rarity_id: string
   rarities: Array<IRarity>
   r1: number
@@ -34,22 +40,12 @@ export interface IRarity {
   r2: number
 }
 
-//await fetch("https://chain.wax.io/v1/chain/get_table_rows", {
-//"credentials": "omit",
-//"headers": {
-//"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0",
-//"Accept": "application/json, text/plain, */*",
-//"Accept-Language": "en-US,en;q=0.5",
-//"Content-Type": "application/json;charset=utf-8",
-//"Pragma": "no-cache",
-//"Cache-Control": "no-cache"
-//},
-//"referrer": "https://rplanet.tools/",
-//"body": "{\"json\":true,\"code\":\"s.rplanet\",\"scope\":\"s.rplanet\",\"table\":\"collections\",\"lower_bound\":\"\",\"upper_bound\":\"\",\"index_position\":1,\"key_type\":\"i64\",\"limit\":1000,\"reverse\":false,\"show_payer\":false}",
-//"method": "POST",
-//"mode": "cors"
-//});
-
+/**
+ * Get the staking configurations in rplanet. This will
+ * be used later to cross reference it with the open listed
+ * nfts and calculate the ROI of each nft based off its market price
+ * and staking rewards.
+ */
 export async function getStakingConf(): Promise<IResponse> {
   const res = await fetch(URL, {
     method: "POST",
@@ -68,7 +64,6 @@ export async function getStakingConf(): Promise<IResponse> {
     }),
   })
   const data = await res.json()
-  //console.log(JSON.stringify(data, null, 2))
 
   return data
 }
