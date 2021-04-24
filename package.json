@@ -43,6 +43,7 @@
   ],
   "license": "0BSD",
   "scripts": {
+    "get-sales": "ts-node ./scripts/get_assets_sales.ts",
     "typecheck": "tsc --noEmit",
     "build": "gatsby build",
     "develop": "gatsby develop",
