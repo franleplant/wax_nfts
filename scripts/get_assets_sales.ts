@@ -1,3 +1,4 @@
+import fs from "fs"
 import fetch from "cross-fetch"
 import {
   Sale,
@@ -5,61 +6,67 @@ import {
   SortOrder,
   SaleState,
 } from "atomicmarket/build/API/Explorer/Types"
-
 import { ExplorerApi } from "atomicmarket"
+
+import range from "./range"
 
 const URL = "https://wax.api.aa.atomichub.io"
 const NAMESPACE = "atomicmarket"
 const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any })
 
-async function fetchAssets(): Promise<Array<Sale>> {
-  const res = await fetch(
-    "https://wax.api.aa.atomichub.io/atomicmarket/v1/sales?page=1&limit=1000&state=1&collection_name=alien.worlds&symbol=WAX",
-    {
-      headers: {
-        accept: "*/*",
-        "accept-language": "en-US,en;q=0.9",
-        "cache-control": "no-cache",
-        pragma: "no-cache",
-        "sec-ch-ua":
-          '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
-        "sec-ch-ua-mobile": "?0",
-        "sec-fetch-dest": "empty",
-        "sec-fetch-mode": "cors",
-        "sec-fetch-site": "cross-site",
-      },
-      referrer: "http://localhost:8000/",
-      referrerPolicy: "strict-origin-when-cross-origin",
-      body: null,
-      method: "GET",
-      mode: "cors",
-      credentials: "omit",
-    }
+async function getPage(page: number): Promise<Array<Sale>> {
+  console.log(`page ${page}: fetching`)
+  const sales = await api.getSales(
+    { state: [SaleState.Listed], symbol: "WAX" },
+    page,
+    1000
   )
+  console.log(`page ${page}: got ${sales.length} sales`)
+  return sales
+}
 
-  const sales = await res.text()
-  console.log(sales)
-  //const sales = await api.getSales(
-  //{
-  //state: [SaleState.Listed],
-  //collection_name: "alien.worlds",
-  //// template_id,
-  //// schema_name,
-  ////match: options.search ? options.search : undefined, // FIXME must not be sent when not used
-  ////sort: SaleSort.Price,
-  ////order: SortOrder.Asc,
-  //symbol: "WAX",
-  //},
-  //1,
-  //10000
-  //)
+async function fetchAssets(): Promise<Array<Sale>> {
+  let sales: Array<Sale> = []
+  let page = 1
+  const batchSize = 20
 
-  return sales as any
+  while (true) {
+    try {
+      let finalPage = false
+      console.log(`batch from ${page} to ${page + batchSize}`)
+
+      await Promise.all(
+        range(page, page + batchSize).map(async page => {
+          const sales = await getPage(page)
+          if (sales.length === 0) {
+            finalPage = true
+          }
+          return sales
+        })
+      )
+
+      page = page + batchSize
+
+      if (finalPage) {
+        console.log("final page found")
+        break
+      }
+    } catch (err) {
+      console.error("error fetching pages", err)
+      break
+    }
+  }
+
+  console.log(`total sales ${sales.length}`)
+
+  return sales
 }
 
 async function main(): Promise<void> {
   const sales = await fetchAssets()
-  console.log(sales)
+  const path = `./src/data/sales.json`
+  fs.writeFileSync(path, JSON.stringify(sales, null, 2))
+  console.log("wrote", path)
 }
 
 main().then(console.log, console.error)
