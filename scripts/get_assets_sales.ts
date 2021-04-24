@@ -10,14 +10,25 @@ import { ExplorerApi } from "atomicmarket"
 
 import range from "./range"
 
-const URL = "https://wax.api.aa.atomichub.io"
+const URL = "https://wax.api.atomicassets.io"
 const NAMESPACE = "atomicmarket"
 const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any })
 
-async function getPage(page: number): Promise<Array<Sale>> {
+export { Sale }
+
+async function getPage(
+  collection: string,
+  schema: string,
+  page: number
+): Promise<Array<Sale>> {
   console.log(`page ${page}: fetching`)
   const sales = await api.getSales(
-    { state: [SaleState.Listed], symbol: "WAX" },
+    {
+      state: [SaleState.Listed],
+      symbol: "WAX",
+      collection_name: collection,
+      schema_name: schema,
+    },
     page,
     1000
   )
@@ -25,10 +36,15 @@ async function getPage(page: number): Promise<Array<Sale>> {
   return sales
 }
 
-async function fetchAssets(): Promise<Array<Sale>> {
+const SOFT_MAX = Infinity
+export async function fetchAssets(
+  collection: string,
+  schema: string
+): Promise<Array<Sale>> {
+  console.log(`fetchAssets sales ${collection} ${schema}`)
   let sales: Array<Sale> = []
   let page = 1
-  const batchSize = 20
+  const batchSize = 5
 
   while (true) {
     try {
@@ -37,15 +53,20 @@ async function fetchAssets(): Promise<Array<Sale>> {
 
       await Promise.all(
         range(page, page + batchSize).map(async page => {
-          const sales = await getPage(page)
-          if (sales.length === 0) {
+          const salesPage = await getPage(collection, schema, page)
+          if (salesPage.length === 0) {
+            console.log("final page found", page)
             finalPage = true
           }
-          return sales
+          sales = sales.concat(salesPage)
         })
       )
 
       page = page + batchSize
+      if (page >= SOFT_MAX) {
+        console.log("SOFT MAX reached")
+        break
+      }
 
       if (finalPage) {
         console.log("final page found")
@@ -57,16 +78,15 @@ async function fetchAssets(): Promise<Array<Sale>> {
     }
   }
 
-  console.log(`total sales ${sales.length}`)
-
+  console.log(`fetchAssets sales ${collection} ${schema} total ${sales.length}`)
   return sales
 }
 
-async function main(): Promise<void> {
-  const sales = await fetchAssets()
-  const path = `./src/data/sales.json`
-  fs.writeFileSync(path, JSON.stringify(sales, null, 2))
-  console.log("wrote", path)
-}
+//async function main(): Promise<void> {
+//const sales = await fetchAssets()
+//const path = `./src/data/sales.json`
+//fs.writeFileSync(path, JSON.stringify(sales, null, 2))
+//console.log("wrote", path)
+//}
 
-main().then(console.log, console.error)
+//main().then(console.log, console.error)

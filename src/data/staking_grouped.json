@@ -1,0 +1,5449 @@
+{
+  "idata": [
+    {
+      "id": "a.rplanet1",
+      "contract": "simpleassets",
+      "author": "a.rplanet",
+      "collection": "idata",
+      "schema": "packs",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kolobok",
+      "contract": "simpleassets",
+      "author": "ilovekolobok",
+      "collection": "idata",
+      "schema": "prize",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "class",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 32000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 48000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "alien.worlds": [
+    {
+      "id": "alien.worlds1",
+      "contract": "atomicassets",
+      "author": "federation",
+      "collection": "alien.worlds",
+      "schema": "faces.worlds",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 12000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Abundant",
+          "uniq_assets": 0,
+          "one_asset_value": 3000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "alien.worlds2",
+      "contract": "atomicassets",
+      "author": "federation",
+      "collection": "alien.worlds",
+      "schema": "crew.worlds",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 12000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Abundant",
+          "uniq_assets": 0,
+          "one_asset_value": 3000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "alien.worlds3",
+      "contract": "atomicassets",
+      "author": "federation",
+      "collection": "alien.worlds",
+      "schema": "arms.worlds",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 12000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Abundant",
+          "uniq_assets": 0,
+          "one_asset_value": 3000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "alien.worlds4",
+      "contract": "atomicassets",
+      "author": "federation",
+      "collection": "alien.worlds",
+      "schema": "tool.worlds",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 12000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Abundant",
+          "uniq_assets": 0,
+          "one_asset_value": 3000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "alien.worlds5",
+      "contract": "atomicassets",
+      "author": "federation",
+      "collection": "alien.worlds",
+      "schema": "land.worlds",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 10000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "anyo.b1": [
+    {
+      "id": "anyo1",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "collection",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Electric Silver Coin",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Silver Coin B&W",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Ghost",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "CryptoC AMA Token",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Blue Token",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "DYGYCON 2.0 Token",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "1024",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Spirit Animal",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Anyobservation Logo Card",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Human Hype Machine",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The B&W Chesterpiece!",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Yellow Chesterpiece",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Pink Anyo Pop",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Teal Anyo Pop!",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Spin it!",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "True Friends v2",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "True Friends v1",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epileptic Panther",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Anyo x-mas",
+          "uniq_assets": 0,
+          "one_asset_value": 240000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "The Crypto Fun Stuff!",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic Spirit Animal",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Spirit Animal",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Portal to NFTs v2",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Portal to NFTs v1",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Social Media Halloween Milestone",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Any'pepe'rvation",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Behind the scenes",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "anyo11",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "podcast",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Anyobservation podcast",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "anyo12",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "photographs",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Relaxing in TianTan",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "anyo2",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "randomness",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Proof of Corey",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Red Paperclip",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "anyo3",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "slices",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "level",
+      "rarities": [
+        {
+          "rarity": "Base",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Platinum",
+          "uniq_assets": 0,
+          "one_asset_value": 210000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 2200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "anyo4",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "redeemable",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "ANYO Physical NFT Artwork",
+          "uniq_assets": 0,
+          "one_asset_value": 50000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "anyo5",
+      "contract": "atomicassets",
+      "author": "anyo.b1",
+      "collection": "anyo.b1",
+      "schema": "dacpackrips",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Pack Rips",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "bitcoinelite": [
+    {
+      "id": "bitcoineli1",
+      "contract": "atomicassets",
+      "author": "bitcoinelite",
+      "collection": "bitcoinelite",
+      "schema": "bitcoinelite",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "img",
+      "rarities": [
+        {
+          "rarity": "Qmd4xrXeDzb2Fo4b4Jk8xbhPvAUJR8znqxtmqhyS3xDTvB",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmdqrgK8twAtHkgDW6kvagAHYroYU17Pda1Nkw3AeBa3Ar",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmPL8hUFtyH625i38TfZkyYyg1jQLicuHqEUgfYRVnrmJH",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmQX22nv2XJMgXTKhM7StPPKBLMw2mcWHkzRMHj6TrFKXP",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmRf8w4KgzUGYX2yNCipFzX3JaNf8aa1iAkwoDuqGQUmuK",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmUSerFi44Mo7LShLPiU3isSJZtW368LfFTQjQv9APnX2Y",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Qmdhs2VLcvvXytdd2d12MiPcBu9XrfuVMrrEddScHDXWYk",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmaQL18TjNEJVp6YFifm9sDFKaqPfPosnSeb6AKpRbbvPu",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmdyUqiD8JjGbBZfkbMhNKSf6ovBT36DMZaMzuhNDNtzk9",
+          "uniq_assets": 0,
+          "one_asset_value": 21000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmdCsXgk8Awn9e238cyFczGUB5vLRLxi5crGdBEzgvShJA",
+          "uniq_assets": 0,
+          "one_asset_value": 21000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmYpSX8F8nvkRkYetJFTjqYL38yC45cdWFLEBzLqVpUrGy",
+          "uniq_assets": 0,
+          "one_asset_value": 100000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmYmf3gEfqiSrBTqaCCnhsV7KWzPSbNj91rU2WVXn6PBjW",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmYAV3KFwSQGELGpZZcXhAiAYkMDDRUCLDhSF9Fjwwy7vp",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmWUz9a35LSjZjsy7iFMGGRSosEqc7izyN8QsPvnSkscQG",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmRABCPtP6bA2bDkmPQK7BVtGAv5mge1B7KTSy3rtzhtDm",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmdF1iq6BxZKSKSifwP8pQ1uBMFgHRaukuX8s13xQL8Ltm",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Qmc12cN3hCCosNjQys3gTpQvMNdNafeRRDiVSEAYLpak5x",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmcndGEnEmDa2iXjFZpR21JgQGzvzxJThEfdc1VSUcr4SG",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmVinxp36D9FR5nEhrhaRodv5ddNFcfSFFUbTn7isNUpu2",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmbT1EXhsPhCrJQFDx9pq14hPFZqPh8xrsJnLF6PFr7tz5",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmNUVAZRQTYDj548VQwRoAXZ6RKSxw4YGeXxfG226wVkwf",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmRmxtNYhsrb2KhFXuWpkSJ8Vu7emKTGc25UzKVDNKqEYG",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmQ9NYo8oG3z9jZjwF26NKjMyC5H1N4AK2L5kxgCLQApGy",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmTCb9jp3MCfyBCFLZLrDBQdMvPFBEs2A3d76rc9PoWKfF",
+          "uniq_assets": 0,
+          "one_asset_value": 70000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmdjaQcBCjc5FTNnGR9tGEnia6dwsayZ8E5UcSbU2ApHVD",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "bitcoinorign": [
+    {
+      "id": "btco1",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "theuprising",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "specialinsert",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "creation",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "anonymous",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "lightning",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sha256",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "opensource",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "genesis",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sketch",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "digitalgold",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "artistsignature",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco11",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "guestartist",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 12500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco12",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "cypher",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco13",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "promo",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco2",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "gitm",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco3",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "btcokeycard",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco4",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "satoshi",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "btco5",
+      "contract": "atomicassets",
+      "author": "btcorigins21",
+      "collection": "bitcoinorign",
+      "schema": "blockreward",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "specialinsert",
+          "uniq_assets": 0,
+          "one_asset_value": 25000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Special Insert",
+          "uniq_assets": 0,
+          "one_asset_value": 12500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Lightning",
+          "uniq_assets": 0,
+          "one_asset_value": 12500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Open Source",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Genesis",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "cartombs.r2": [
+    {
+      "id": "cartombs1",
+      "contract": "atomicassets",
+      "author": "cartombs.r2",
+      "collection": "cartombs.r2",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "unique",
+          "uniq_assets": 0,
+          "one_asset_value": 50000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "extraordinary",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 120000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "cartombs2",
+      "contract": "atomicassets",
+      "author": "cartombs.r2",
+      "collection": "cartombs.r2",
+      "schema": "promocards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "bonus",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "cartombs3",
+      "contract": "atomicassets",
+      "author": "cartombs.r2",
+      "collection": "cartombs.r2",
+      "schema": "burn",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "img",
+      "rarities": [
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/1.png",
+          "uniq_assets": 0,
+          "one_asset_value": 150000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/1.png",
+          "uniq_assets": 0,
+          "one_asset_value": 260000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/1.png",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/2.png",
+          "uniq_assets": 0,
+          "one_asset_value": 230000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/2.png",
+          "uniq_assets": 0,
+          "one_asset_value": 390000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/2.png",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/3.png",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/3.png",
+          "uniq_assets": 0,
+          "one_asset_value": 520000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/3.png",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/4.png",
+          "uniq_assets": 0,
+          "one_asset_value": 450000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/4.png",
+          "uniq_assets": 0,
+          "one_asset_value": 780000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/4.png",
+          "uniq_assets": 0,
+          "one_asset_value": 1200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/5.png",
+          "uniq_assets": 0,
+          "one_asset_value": 750000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/5.png",
+          "uniq_assets": 0,
+          "one_asset_value": 1300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/5.png",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/6.png",
+          "uniq_assets": 0,
+          "one_asset_value": 1500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/6.png",
+          "uniq_assets": 0,
+          "one_asset_value": 2600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/6.png",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/bronze/7.png",
+          "uniq_assets": 0,
+          "one_asset_value": 7500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/silver/7.png",
+          "uniq_assets": 0,
+          "one_asset_value": 13000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSrGqvEM6ozpf11ZJtzFKM7LEJ56atjUAdtuuU6qcf5Xc/gold/7.png",
+          "uniq_assets": 0,
+          "one_asset_value": 20000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "collectwhale": [
+    {
+      "id": "collect1",
+      "contract": "atomicassets",
+      "author": "collectwhale",
+      "collection": "collectwhale",
+      "schema": "key",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "img",
+      "rarities": [
+        {
+          "rarity": "QmfPnDS9RGUpPhfrQHRECyEzC39HLd5Gx924fynY5hCK3D",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "crypto5tache": [
+    {
+      "id": "crypto5tach1",
+      "contract": "atomicassets",
+      "author": "z4fos.wam",
+      "collection": "crypto5tache",
+      "schema": "basicstache",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "crypto5tach2",
+      "contract": "atomicassets",
+      "author": "z4fos.wam",
+      "collection": "crypto5tache",
+      "schema": "collabstache",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "FRENS",
+          "uniq_assets": 0,
+          "one_asset_value": 100000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Diamond",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "crypto5tach3",
+      "contract": "atomicassets",
+      "author": "z4fos.wam",
+      "collection": "crypto5tache",
+      "schema": "stickystache",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "darkcountryh": [
+    {
+      "id": "darkcountry11",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "cultists",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry12",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "promotional",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry13",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "standardcard",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry14",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "collectible",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry15",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "rarecards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry21",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "mythcards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Mythical",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry22",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "legendcards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry23",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "epiccards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountry24",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "commoncards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountryh1",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "legheroes",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 24000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountryh2",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "epicheroes",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountryh3",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "rareheroes",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountryh4",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "dcheroes",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "darkcountryh5",
+      "contract": "atomicassets",
+      "author": "darkcountryh",
+      "collection": "darkcountryh",
+      "schema": "mythheroes",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "flegendsnfts": [
+    {
+      "id": "flegends1",
+      "contract": "atomicassets",
+      "author": "flegendsnfts",
+      "collection": "flegendsnfts",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "ultra rare",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 1200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "gold",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 20000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "flegends2",
+      "contract": "atomicassets",
+      "author": "flegendsnfts",
+      "collection": "flegendsnfts",
+      "schema": "promo1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "hodlgod": [
+    {
+      "id": "hodlgod1",
+      "contract": "atomicassets",
+      "author": "hodlgod",
+      "collection": "hodlgod",
+      "schema": "genesis",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "50 HodlGod Credits",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "125 HodlGod Credits",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Demon Gene Armour Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Demon Gene Bow Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Demon Gene Sword Mainhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Demon Gene Sword Offhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Demon Gene Bounty Contract",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Element Walker Armour Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Element Walker Bow Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Element Walker Scythe Mainhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Element Walker Scythe Offhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Element Walker Bounty Contract",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Hellwax Armour Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Hellwax Bow Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Hellwax Sword Mainhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Hellwax Sword Offhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Hellwax Bounty Contract",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "LiquidTitan Armour Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "LiquidTitan Bow Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "LiquidTitan Axe Mainhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "LiquidTitan Axe Offhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "LiquidTitan Bounty Contract",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Supervoid Armour Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Supervoid Bow Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Supervoid Axe Mainhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Supervoid Axe Offhand Shard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Supervoid Bounty Contract",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Enigma Fire",
+          "uniq_assets": 0,
+          "one_asset_value": 15000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Enigma Ice",
+          "uniq_assets": 0,
+          "one_asset_value": 15000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "hodlgod2",
+      "contract": "atomicassets",
+      "author": "hodlgod",
+      "collection": "hodlgod",
+      "schema": "hodlgodleaks",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Genesis Collector's NFT Leak #1",
+          "uniq_assets": 0,
+          "one_asset_value": 6000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "hodlgod3",
+      "contract": "atomicassets",
+      "author": "hodlgod",
+      "collection": "hodlgod",
+      "schema": "trophies",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "name",
+      "rarities": [
+        {
+          "rarity": "Immortal Genesis Sticker Collectible",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Gold Badge Collectible",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "HodlGod Meme Contest Trophy Sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 21000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "kennbosakgif": [
+    {
+      "id": "kennbosak1",
+      "contract": "atomicassets",
+      "author": "33d4q.wam",
+      "collection": "kennbosakgif",
+      "schema": "collabs",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 100000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kennbosak11",
+      "contract": "atomicassets",
+      "author": "33d4q.wam",
+      "collection": "kennbosakgif",
+      "schema": "minables",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Minable",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kennbosak2",
+      "contract": "atomicassets",
+      "author": "33d4q.wam",
+      "collection": "kennbosakgif",
+      "schema": "collectibles",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Gift",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Top Shelf",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmYZtWZN2McrtuQQ4x8Hce7bVcpCUq4ZspRsC9AMi2CFWM",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmckKqM9nQSsztqn5wtw8VC2DxcmKsiqdcdaJCnm6MGVPU",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "standard",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "basic",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Beta",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kennbosak3",
+      "contract": "atomicassets",
+      "author": "33d4q.wam",
+      "collection": "kennbosakgif",
+      "schema": "memberships",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kennbosak4",
+      "contract": "atomicassets",
+      "author": "33d4q.wam",
+      "collection": "kennbosakgif",
+      "schema": "badges",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kennbosak5",
+      "contract": "atomicassets",
+      "author": "33d4q.wam",
+      "collection": "kennbosakgif",
+      "schema": "airdrops",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Airdrop",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "kogsofficial": [
+    {
+      "id": "kogs1",
+      "contract": "atomicassets",
+      "author": "kogsofficial",
+      "collection": "kogsofficial",
+      "schema": "1stedition",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 4000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "ultra rare",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "kogs2",
+      "contract": "atomicassets",
+      "author": "kogsofficial",
+      "collection": "kogsofficial",
+      "schema": "2ndedition",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 4000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "ultra rare",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "monsters.r2": [
+    {
+      "id": "monsters1",
+      "contract": "atomicassets",
+      "author": "monsters.r2",
+      "collection": "monsters.r2",
+      "schema": "master",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "master",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "monsters2",
+      "contract": "atomicassets",
+      "author": "monsters.r2",
+      "collection": "monsters.r2",
+      "schema": "elite",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "monsters3",
+      "contract": "atomicassets",
+      "author": "monsters.r2",
+      "collection": "monsters.r2",
+      "schema": "premium",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "monsters4",
+      "contract": "atomicassets",
+      "author": "monsters.r2",
+      "collection": "monsters.r2",
+      "schema": "promocards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "bonus",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "monsters5",
+      "contract": "atomicassets",
+      "author": "monsters.r2",
+      "collection": "monsters.r2",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "mutants.r2": [
+    {
+      "id": "mutants1",
+      "contract": "atomicassets",
+      "author": "mutants.r2",
+      "collection": "mutants.r2",
+      "schema": "promocards",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "bonus",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "mutants2",
+      "contract": "atomicassets",
+      "author": "mutants.r2",
+      "collection": "mutants.r2",
+      "schema": "premium",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "mutants3",
+      "contract": "atomicassets",
+      "author": "mutants.r2",
+      "collection": "mutants.r2",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 1600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 120000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "officialhero": [
+    {
+      "id": "officialhero1",
+      "contract": "atomicassets",
+      "author": "heroes",
+      "collection": "officialhero",
+      "schema": "bonusheroes",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 240000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 240000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 2400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "golden",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "secret",
+          "uniq_assets": 0,
+          "one_asset_value": 16000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "officialhero2",
+      "contract": "atomicassets",
+      "author": "heroes",
+      "collection": "officialhero",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 32000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "class",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "golden",
+          "uniq_assets": 0,
+          "one_asset_value": 1200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "secret",
+          "uniq_assets": 0,
+          "one_asset_value": 2400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "genesis",
+          "uniq_assets": 0,
+          "one_asset_value": 40000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "officialhero3",
+      "contract": "atomicassets",
+      "author": "heroes",
+      "collection": "officialhero",
+      "schema": "series1.x",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "undefined",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "classic",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "action",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 240000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 320000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "enchanted",
+          "uniq_assets": 0,
+          "one_asset_value": 320000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "NFTMail",
+          "uniq_assets": 0,
+          "one_asset_value": 1200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 1200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "golden",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "secret",
+          "uniq_assets": 0,
+          "one_asset_value": 8000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "officialhero4",
+      "contract": "atomicassets",
+      "author": "heroes",
+      "collection": "officialhero",
+      "schema": "series2.x",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 8000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 32000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 32000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "classic",
+          "uniq_assets": 0,
+          "one_asset_value": 32000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "class",
+          "uniq_assets": 0,
+          "one_asset_value": 160000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 240000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "collectors",
+          "uniq_assets": 0,
+          "one_asset_value": 320000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "artifact",
+          "uniq_assets": 0,
+          "one_asset_value": 320000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "secret",
+          "uniq_assets": 0,
+          "one_asset_value": 2400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "electric",
+          "uniq_assets": 0,
+          "one_asset_value": 16000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "officialhero5",
+      "contract": "atomicassets",
+      "author": "heroes",
+      "collection": "officialhero",
+      "schema": "stonkwars",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "collectors",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "electric",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "classic",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "secret",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 10000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "rplanet": [
+    {
+      "id": "rplanet",
+      "contract": "atomicassets",
+      "author": "rplanet",
+      "collection": "rplanet",
+      "schema": "elements",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 150000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 1250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "rplanet1",
+      "contract": "atomicassets",
+      "author": "rplanet",
+      "collection": "rplanet",
+      "schema": "rigs",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 1500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 8000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 50000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 100000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "rplanet2",
+      "contract": "atomicassets",
+      "author": "rplanet",
+      "collection": "rplanet",
+      "schema": "rigs2",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 1500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 8000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 50000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 100000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "rplanet3",
+      "contract": "atomicassets",
+      "author": "rplanet",
+      "collection": "rplanet",
+      "schema": "inventors",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 5000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "mdata": [
+    {
+      "id": "topps1",
+      "contract": "simpleassets",
+      "author": "gpk.topps",
+      "collection": "mdata",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "variant",
+      "rarities": [
+        {
+          "rarity": "base",
+          "uniq_assets": 0,
+          "one_asset_value": 4000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "prism",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sketch",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "collector",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "golden",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "topps2",
+      "contract": "simpleassets",
+      "author": "gpk.topps",
+      "collection": "mdata",
+      "schema": "series2",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "variant",
+      "rarities": [
+        {
+          "rarity": "base",
+          "uniq_assets": 0,
+          "one_asset_value": 4000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "sketch",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "raw",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "returning",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "vhs",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "error",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "slime",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "gum",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "collector",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "relic",
+          "uniq_assets": 0,
+          "one_asset_value": 2000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "originalart",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "topps3",
+      "contract": "simpleassets",
+      "author": "gpk.topps",
+      "collection": "mdata",
+      "schema": "exotic",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "variant",
+      "rarities": [
+        {
+          "rarity": "prism",
+          "uniq_assets": 0,
+          "one_asset_value": 16000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "base",
+          "uniq_assets": 0,
+          "one_asset_value": 4000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "tigerborder",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "tigerscratch",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "collector",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "golden",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "tribalbooks": [
+    {
+      "id": "tribalbooks1",
+      "contract": "atomicassets",
+      "author": "tribalbooks",
+      "collection": "tribalbooks",
+      "schema": "symbols",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 52,
+          "one_asset_value": 40000,
+          "collection_value": 4160000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 47,
+          "one_asset_value": 120000,
+          "collection_value": 11280000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "unique",
+          "uniq_assets": 24,
+          "one_asset_value": 400000,
+          "collection_value": 19200000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 18,
+          "one_asset_value": 600000,
+          "collection_value": 21600000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 14,
+          "one_asset_value": 1000000,
+          "collection_value": 28000000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 12,
+          "one_asset_value": 20000000,
+          "collection_value": 480000000,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "tribalbooks2",
+      "contract": "atomicassets",
+      "author": "tribalbooks",
+      "collection": "tribalbooks",
+      "schema": "books",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "common",
+          "uniq_assets": 5,
+          "one_asset_value": 100000,
+          "collection_value": 1000000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 5,
+          "one_asset_value": 200000,
+          "collection_value": 2000000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "unique",
+          "uniq_assets": 5,
+          "one_asset_value": 400000,
+          "collection_value": 4000000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 5,
+          "one_asset_value": 2000000,
+          "collection_value": 20000000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 5,
+          "one_asset_value": 4000000,
+          "collection_value": 40000000,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 5,
+          "one_asset_value": 20000000,
+          "collection_value": 200000000,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "ultrahorrors": [
+    {
+      "id": "ultrahorror11",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "alienpromo",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Promo",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorror12",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "splntrhorror",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Base",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorror13",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "alienhorrors",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Black and Chrome",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Ultra Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Special",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 180000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Limited",
+          "uniq_assets": 0,
+          "one_asset_value": 130000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Base",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Trade Sticker",
+          "uniq_assets": 0,
+          "one_asset_value": 10000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorrors1",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Gold",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Insert",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Secret",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 2500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Special",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Ultra Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 1250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 180000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Limited",
+          "uniq_assets": 0,
+          "one_asset_value": 130000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 80000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Base",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorrors2",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "horrorspromo",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Promo",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorrors3",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "horrorsguest",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Bloodsoaked",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorrors4",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "horrorsextra",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Extra",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrahorrors5",
+      "contract": "atomicassets",
+      "author": "gtyaw.wam",
+      "collection": "ultrahorrors",
+      "schema": "horrorcollab",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Gold",
+          "uniq_assets": 0,
+          "one_asset_value": 50000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 800000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Neon Demons",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Base",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "ultrarare": [
+    {
+      "id": "ultrarare1",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "cryptids",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Ultra Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 3000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Base",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare11",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultratickets",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare12",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultrararebox",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare13",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultrarebonus",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare14",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultrararecap",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare15",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "xmasgiftbox",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare2",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultrararepin",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare3",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultrarenftee",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare4",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "ultrararswag",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "",
+      "rarities": [
+        {
+          "rarity": "",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "ultrarare5",
+      "contract": "atomicassets",
+      "author": "ultrarare",
+      "collection": "ultrarare",
+      "schema": "exclusives",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "Rarity",
+      "rarities": [
+        {
+          "rarity": "Lost Variant",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "upland.cards": [
+    {
+      "id": "upland1",
+      "contract": "atomicassets",
+      "author": "upland.cards",
+      "collection": "upland.cards",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "unique",
+          "uniq_assets": 0,
+          "one_asset_value": 25000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 10000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 250000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "upland2",
+      "contract": "atomicassets",
+      "author": "upland.cards",
+      "collection": "upland.cards",
+      "schema": "upland.promo",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 10000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "promo",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 600000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "epic",
+          "uniq_assets": 0,
+          "one_asset_value": 120000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "rare",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "common",
+          "uniq_assets": 0,
+          "one_asset_value": 5000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "upliftart": [
+    {
+      "id": "upliftart1",
+      "contract": "atomicassets",
+      "author": "upliftart",
+      "collection": "upliftart",
+      "schema": "community",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Gold",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Random",
+          "uniq_assets": 0,
+          "one_asset_value": 40000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "upliftart2",
+      "contract": "atomicassets",
+      "author": "upliftart",
+      "collection": "upliftart",
+      "schema": "special",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Special",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Random",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "upliftart3",
+      "contract": "atomicassets",
+      "author": "upliftart",
+      "collection": "upliftart",
+      "schema": "series1",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "rarity",
+      "rarities": [
+        {
+          "rarity": "Random",
+          "uniq_assets": 0,
+          "one_asset_value": 300000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Legendary",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Epic",
+          "uniq_assets": 0,
+          "one_asset_value": 60000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Rare",
+          "uniq_assets": 0,
+          "one_asset_value": 50000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Uncommon",
+          "uniq_assets": 0,
+          "one_asset_value": 30000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Common",
+          "uniq_assets": 0,
+          "one_asset_value": 20000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "Mythic",
+          "uniq_assets": 0,
+          "one_asset_value": 500000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ],
+  "upliftworld2": [
+    {
+      "id": "upliftworld1",
+      "contract": "atomicassets",
+      "author": "upliftworld2",
+      "collection": "upliftworld2",
+      "schema": "genesis",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "img",
+      "rarities": [
+        {
+          "rarity": "QmPnN3RnmpWKHGXES2J53cwK4EycWv3rvsVuimXTeFBUFs",
+          "uniq_assets": 0,
+          "one_asset_value": 80000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmToxFFMLMh1qdriyxz9zMb56Fvd4SGubcX9AR24brzdAP",
+          "uniq_assets": 0,
+          "one_asset_value": 4000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmZWMg5wTko8r3KzTqSKRkZzBcfg4g9vKJXVdRwyoB6Rn9",
+          "uniq_assets": 0,
+          "one_asset_value": 6000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmXG2rPDLvYGESw4u5NBjdygwSb2mFzpHmFWK6DNJMkhyU",
+          "uniq_assets": 0,
+          "one_asset_value": 3000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmXqMpEiZvUq5GHnZkgGG1saFsoBs335P8N47SQms2XozQ",
+          "uniq_assets": 0,
+          "one_asset_value": 7000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmcWSqQgX5iNzVjqT9VDnaExDQvwMJAFdaqYkm45PmPTAq",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "upliftworld2",
+      "contract": "atomicassets",
+      "author": "upliftworld2",
+      "collection": "upliftworld2",
+      "schema": "collectibles",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "img",
+      "rarities": [
+        {
+          "rarity": "QmbNoaR7bxHYegpdo6vq5kHaf8KcSerwExgmgyT4UdCJiC",
+          "uniq_assets": 0,
+          "one_asset_value": 10000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmQvUBwjaCMbP6s18rTM7NdREGe2JtwGW1fMGtB6emyg2w",
+          "uniq_assets": 0,
+          "one_asset_value": 1000000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    },
+    {
+      "id": "upliftworld3",
+      "contract": "atomicassets",
+      "author": "upliftworld2",
+      "collection": "upliftworld2",
+      "schema": "packs",
+      "name_id": "name",
+      "img_id": "img",
+      "rarity_id": "img",
+      "rarities": [
+        {
+          "rarity": "QmdDpoQtquv4jBnNSzz9LBvtf3e5YdvjXsscvgxcrekNtT",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmaBD6L4XEtpGj1udHm8HbiGUcBTArE44odjoegUvk8PAs",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmSbXBPAxNa3qczExGVfUisWDcNYQLQdLUmgsVqiZwecAs",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmZCdBLeR9EPTkWcntanp1qgLxnvR7BooC2525Vwn45oRV",
+          "uniq_assets": 0,
+          "one_asset_value": 400000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmZKxXUGVW4WXZjYa91GuoSE7yC8JKckYUVWHQGbXMAGDL",
+          "uniq_assets": 0,
+          "one_asset_value": 200000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        },
+        {
+          "rarity": "QmNgoTNNWBeEsDBZ1roUc18QkvzGyaz9k8DCfBQaL6Z58Q",
+          "uniq_assets": 0,
+          "one_asset_value": 100000,
+          "collection_value": 0,
+          "r1": 0,
+          "r2": 0
+        }
+      ],
+      "r1": 0,
+      "r2": 0,
+      "r3": 0
+    }
+  ]
+}

@@ -7,7 +7,7 @@ import {
 import { useQuery, UseQueryResult } from "react-query"
 import { ExplorerApi } from "atomicmarket"
 
-const URL = "https://wax.api.aa.atomichub.io"
+const URL = "https://wax.api.atomicassets.io"
 const NAMESPACE = "atomicmarket"
 const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any })
 
