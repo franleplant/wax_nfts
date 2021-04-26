@@ -15,6 +15,11 @@ export const saleParams: SaleParams = {
   symbol: "WAX",
 }
 
+/**
+ * fetch all the market information out of the stakeable assets,
+ * that way we can find out how much they cost in the market and we
+ * can evaluate how profitable they are to stake
+ */
 export async function main() {
   const path = `./src/data/staking_grouped.json`
   const stakingByCollection = JSON.parse(
