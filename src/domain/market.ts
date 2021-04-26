@@ -27,9 +27,30 @@ export function getAetherInWax(
 export function getAetherInUSDT(marketData: Array<IMarketData>): number {
   const waxInUSDT = getWaxInUSDT(marketData)?.last_price || 0
   const aetherInWax = getAetherInWax(marketData)?.last_price || 0
-  console.log(getWaxInUSDT(marketData), getAetherInWax(marketData))
 
   const price = aetherInWax * waxInUSDT
 
   return price
+}
+
+export type CurrencyConverter = (currency: number) => number
+
+export function getConverters(marketData: Array<IMarketData>) {
+  const aetherInWax = getAetherInWax(marketData)
+  const waxInUSDT = getWaxInUSDT(marketData)
+
+  const aetherToWax: CurrencyConverter = aether =>
+    (aetherInWax?.last_price || 0) * aether
+  const waxToAether: CurrencyConverter = wax =>
+    wax / (aetherInWax?.last_price || 1)
+  const waxToUsdt: CurrencyConverter = wax => (waxInUSDT?.last_price || 0) * wax
+  const usdtToWax: CurrencyConverter = usdt =>
+    usdt / (waxInUSDT?.last_price || 1)
+
+  return {
+    aetherToWax,
+    waxToAether,
+    waxToUsdt,
+    usdtToWax,
+  }
 }

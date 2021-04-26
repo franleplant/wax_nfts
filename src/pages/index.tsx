@@ -12,6 +12,7 @@ import { useAssets, ApiAsset } from "../dal/atomic"
 import NFT from "../components/NFT"
 import { useSales, Sale } from "../dal/atomicmarket"
 import AssetSale from "../components/AssetSale"
+import APY from "../components/APY"
 
 export interface IData {
   data: {
@@ -56,23 +57,23 @@ function Content(props: {
     <>
       <Row justify="start" gutter={5}>
         <Col>
-          <Card
-            bordered
-            style={{ maxWidth: "350px" }}
-            title={
-              <Price price={aether} quoteLabel="AETHER" baseLabel="USDT" />
-            }
-          >
-            <RateForm rate={aether} quoteLabel="AETHER" baseLabel="USDT" />
+          <Card bordered style={{ maxWidth: "350px" }} title={"Rates"}>
+            <Price price={aether} quoteLabel="AETHER" baseLabel="USDT" />
+            <Price price={wax} quoteLabel="WAX" baseLabel="USDT" />
           </Card>
         </Col>
         <Col>
           <Card
             bordered
             style={{ maxWidth: "350px" }}
-            title={<Price price={wax} quoteLabel="WAX" baseLabel="USDT" />}
+            title={"Currency Converter"}
           >
-            <RateForm rate={wax} quoteLabel="WAX" baseLabel="USDT" />
+            <RateForm marketData={props.marketData} />
+          </Card>
+        </Col>
+        <Col>
+          <Card bordered style={{ maxWidth: "350px" }} title={"APY"}>
+            <APY marketData={props.marketData} />
           </Card>
         </Col>
       </Row>

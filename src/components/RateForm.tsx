@@ -1,61 +1,81 @@
 import React, { useState } from "react"
-import { Form, InputNumber } from "antd"
+import { Button, Form, InputNumber } from "antd"
 import { ArrowDownOutlined } from "@ant-design/icons"
+import { IMarketData } from "../dal/market"
+import { getAetherInWax, getConverters, getWaxInUSDT } from "../domain/market"
 
 export interface IForm {
-  quote: number | undefined
-  base: number | undefined
+  aether: number
+  wax: number
+  usdt: number
 }
 
 export interface IProps {
-  rate: number
-  quoteLabel: string
-  baseLabel: string
+  marketData: Array<IMarketData>
 }
 
-export default function RateForm({
-  rate,
-  quoteLabel,
-  baseLabel,
-}: IProps): JSX.Element {
-  const [form, setForm] = useState<IForm>({ base: rate, quote: 1 })
+export default function RateForm(props: IProps): JSX.Element {
+  const { marketData } = props
+  const converters = getConverters(marketData)
 
-  function onQuoteChange(quote: number): void {
-    const base = quote * rate
-    setForm({ quote, base })
+  const calcNewState: Record<keyof IForm, (newValue: number) => IForm> = {
+    aether: (aether): IForm => {
+      const wax = converters.aetherToWax(aether)
+      const usdt = converters.waxToUsdt(wax)
+      return { aether, wax, usdt }
+    },
+    wax: wax => {
+      const aether = converters.waxToAether(wax)
+      const usdt = converters.waxToUsdt(wax)
+      return { aether, wax, usdt }
+    },
+    usdt: usdt => {
+      const wax = converters.usdtToWax(usdt)
+      const aether = converters.waxToAether(wax)
+      return { aether, wax, usdt }
+    },
   }
 
-  function onBaseChange(base: number): void {
-    const quote = base / rate
-    setForm({ quote, base })
+  const [form, setForm] = useState<IForm>(calcNewState.usdt(1))
+
+  function onChange(currency: keyof IForm) {
+    return (newValue: number) => {
+      setForm(calcNewState[currency](newValue))
+    }
   }
 
   return (
     <Form labelCol={{ span: 8 }} wrapperCol={{ span: 16 }}>
-      <Form.Item label={quoteLabel}>
+      <Form.Item label={"AETHER"}>
         <InputNumber
           style={{ width: "100%" }}
-          value={form.quote}
-          onChange={onQuoteChange}
+          value={form.aether}
+          onChange={onChange("aether")}
           precision={9}
         />
       </Form.Item>
 
-      <div style={{ textAlign: "center", paddingBottom: "20px" }}>
-        <ArrowDownOutlined
-          twoToneColor="#eb2f96"
-          style={{ fontSize: "30px" }}
-        />
-      </div>
-
-      <Form.Item label={baseLabel}>
+      <Form.Item label={"WAX"}>
         <InputNumber
           style={{ width: "100%" }}
-          value={form.base}
-          onChange={onBaseChange}
+          value={form.wax}
+          onChange={onChange("wax")}
           precision={9}
         />
       </Form.Item>
+
+      <Form.Item label={"USDT"}>
+        <InputNumber
+          style={{ width: "100%" }}
+          value={form.usdt}
+          onChange={onChange("usdt")}
+          precision={9}
+        />
+      </Form.Item>
+
+      <Button htmlType="reset" onClick={() => setForm(calcNewState.usdt(1))}>
+        Reset
+      </Button>
     </Form>
   )
 }
