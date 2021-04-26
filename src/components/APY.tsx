@@ -34,6 +34,7 @@ export default function APY(props: IProps): JSX.Element {
   // we will eventually work on an automatic compounding mechanism
   // that will make this much more profitable
   const hourlyYield = (form.stakingRewardRatio * aetherInUsdt) / waxInUsdt
+  console.log("hourly yield in dollars", hourlyYield)
   const apy = hourlyYield * 24 * 365
 
   return (
