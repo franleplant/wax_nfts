@@ -1,3 +1,4 @@
+// TODO rename to currencyMarket
 import { useQuery, UseQueryResult } from "react-query"
 
 export interface IMarketData {

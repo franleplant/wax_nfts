@@ -8,6 +8,7 @@ import "antd/dist/antd.css"
 
 import React from "react"
 import AppWrapper from "./src/components/AppWrapper"
+import "./src/declarations.d.ts"
 
 // Wraps every page in a component
 export function wrapPageElement({ element, props }) {

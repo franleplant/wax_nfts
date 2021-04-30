@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { PageProps, Link, graphql } from "gatsby"
-import { Card, Row, Col } from "antd"
+import { Card, Row, Col, Table } from "antd"
 import SEO from "../components/seo"
 import { useGetMarketAll, IMarketData } from "../dal/market"
 import { getAetherInUSDT, getWaxInUSDT } from "../domain/market"
@@ -13,6 +13,9 @@ import NFT from "../components/NFT"
 import { useSales, Sale } from "../dal/atomicmarket"
 import AssetSale from "../components/AssetSale"
 import APY from "../components/APY"
+import report from "../data/report.json"
+import { IReportRow } from "../dal/report"
+import Report from "../components/Report"
 
 export interface IData {
   data: {
@@ -26,19 +29,7 @@ export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
       <SEO />
-      <AsyncManager
-        queries={[
-          useGetMarketAll(),
-          useAssets(),
-          /*
-          useSales({
-            collection: "alien.worlds",
-            page: 1,
-            limit: 40,
-          }),
-           */
-        ]}
-      >
+      <AsyncManager queries={[useGetMarketAll(), useAssets()]}>
         {([marketData, assets]) => (
           <Content marketData={marketData} assets={assets} />
         )}
@@ -53,6 +44,8 @@ function Content(props: {
 }): JSX.Element {
   const aether = getAetherInUSDT(props.marketData) || 0
   const wax = getWaxInUSDT(props.marketData)?.last_price || 0
+
+  const reportData: Array<IReportRow> = report
   return (
     <>
       <Row justify="start" gutter={5}>
@@ -78,16 +71,10 @@ function Content(props: {
         </Col>
       </Row>
 
-      <h1>Sales</h1>
-      {/*
-      <Row gutter={10}>
-        {props.sales.map(sale => (
-          <Col>
-            <AssetSale key={sale.sale_id} sale={sale} />
-          </Col>
-        ))}
+      <Row>
+        <Report data={reportData} />
       </Row>
-              */}
+      {/*
       <Row gutter={10}>
         {props.assets.map(asset => (
           <Col>
@@ -95,6 +82,7 @@ function Content(props: {
           </Col>
         ))}
       </Row>
+*/}
     </>
   )
 }
