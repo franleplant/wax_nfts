@@ -1,7 +1,7 @@
 // TODO rename to currencyMarket
 import { useQuery, UseQueryResult } from "react-query"
 
-export interface IMarketData {
+export interface ICurrencyExchange {
   id: number
   base_token: {
     contract: string
@@ -30,10 +30,10 @@ export interface IMarketData {
   changeWeek: number
 }
 
-export function useGetMarketAll(): UseQueryResult<Array<IMarketData>> {
+export function useGetMarketAll(): UseQueryResult<Array<ICurrencyExchange>> {
   const url = "https://wax.alcor.exchange/api/markets"
 
-  return useQuery<Array<IMarketData>>({
+  return useQuery<Array<ICurrencyExchange>>({
     queryKey: `market`,
     queryFn: async () => {
       const res = await fetch(url)

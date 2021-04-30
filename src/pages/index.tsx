@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react"
 import { PageProps, Link, graphql } from "gatsby"
 import { Card, Row, Col, Table } from "antd"
 import SEO from "../components/seo"
-import { useGetMarketAll, IMarketData } from "../dal/market"
-import { getAetherInUSDT, getWaxInUSDT } from "../domain/market"
+import { useGetMarketAll, ICurrencyExchange } from "../dal/currency"
+import { getAetherInUSDT, getWaxInUSDT } from "../domain/currency"
 import Layout from "../components/Layout"
 import Price from "../components/Price"
 import RateForm from "../components/RateForm"
@@ -30,8 +30,8 @@ export default function Index(props: PageProps<IData>) {
     <Layout>
       <SEO />
       <AsyncManager queries={[useGetMarketAll(), useAssets()]}>
-        {([marketData, assets]) => (
-          <Content marketData={marketData} assets={assets} />
+        {([currencyExchange, assets]) => (
+          <Content currencyExchange={currencyExchange} assets={assets} />
         )}
       </AsyncManager>
     </Layout>
@@ -39,11 +39,11 @@ export default function Index(props: PageProps<IData>) {
 }
 
 function Content(props: {
-  marketData: Array<IMarketData>
+  currencyExchange: Array<ICurrencyExchange>
   assets: Array<ApiAsset>
 }): JSX.Element {
-  const aether = getAetherInUSDT(props.marketData) || 0
-  const wax = getWaxInUSDT(props.marketData)?.last_price || 0
+  const aether = getAetherInUSDT(props.currencyExchange) || 0
+  const wax = getWaxInUSDT(props.currencyExchange)?.last_price || 0
 
   const reportData: Array<IReportRow> = report
   return (
@@ -61,12 +61,12 @@ function Content(props: {
             style={{ maxWidth: "350px" }}
             title={"Currency Converter"}
           >
-            <RateForm marketData={props.marketData} />
+            <RateForm currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
         <Col>
           <Card bordered style={{ maxWidth: "350px" }} title={"APY"}>
-            <APY marketData={props.marketData} />
+            <APY currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
       </Row>

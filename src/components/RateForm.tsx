@@ -1,8 +1,7 @@
 import React, { useState } from "react"
 import { Button, Form, InputNumber } from "antd"
-import { ArrowDownOutlined } from "@ant-design/icons"
-import { IMarketData } from "../dal/market"
-import { getAetherInWax, getConverters, getWaxInUSDT } from "../domain/market"
+import { ICurrencyExchange } from "../dal/currency"
+import { getAetherInWax, getConverters, getWaxInUSDT } from "../domain/currency"
 
 export interface IForm {
   aether: number
@@ -11,12 +10,12 @@ export interface IForm {
 }
 
 export interface IProps {
-  marketData: Array<IMarketData>
+  currencyExchange: Array<ICurrencyExchange>
 }
 
 export default function RateForm(props: IProps): JSX.Element {
-  const { marketData } = props
-  const converters = getConverters(marketData)
+  const { currencyExchange } = props
+  const converters = getConverters(currencyExchange)
 
   const calcNewState: Record<keyof IForm, (newValue: number) => IForm> = {
     aether: (aether): IForm => {

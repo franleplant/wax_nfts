@@ -1,6 +1,7 @@
 import React from "react"
 import { ColumnsType } from "antd/lib/table"
 import { IReportRow } from "../../dal/report"
+import PriceCell from "./PriceCell"
 
 const columns: ColumnsType<IReportRow> = [
   {
@@ -30,22 +31,9 @@ const columns: ColumnsType<IReportRow> = [
     dataIndex: "avg_price_wax",
   },
   {
-    title: "Staking Price Ratio",
+    title: "Yield",
     dataIndex: "avg_staking_price_ratio",
-    render: (_value, record) => {
-      const {
-        avg_staking_price_ratio: avg,
-        min_staking_price_ratio: min,
-        max_staking_price_ratio: max,
-      } = record
-
-      return (
-        <div>
-          <div>{`avg ${avg}`}</div>
-          <div>{`min ${min} - max ${max}`}</div>
-        </div>
-      )
-    },
+    render: (_value, record) => <PriceCell row={record} />,
   },
   {
     title: "Aether / Hour",

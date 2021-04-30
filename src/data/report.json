@@ -1,0 +1,30 @@
+[
+ {
+  "template": "92242",
+  "name": "April Slice",
+  "collection": "anyo.b1",
+  "schema": "slices",
+  "count": 3,
+  "avg_price_wax": 375,
+  "avg_staking_price_ratio": 0.58,
+  "min_staking_price_ratio": 0.58,
+  "max_staking_price_ratio": 0.58,
+  "aether_hour": 220,
+  "assets": ["1099524313671", "1099524313674", "1099524313667"],
+  "sale_ids": ["9991491", "9991540", "9991568"]
+},
+ {
+  "template": "92242",
+  "name": "April Slice",
+  "collection": "anyo.b1",
+  "schema": "slices",
+  "count": 3,
+  "avg_price_wax": 375,
+  "avg_staking_price_ratio": 0.58,
+  "min_staking_price_ratio": 0.58,
+  "max_staking_price_ratio": 0.58,
+  "aether_hour": 220,
+  "assets": ["1099524313671", "1099524313674", "1099524313667"],
+  "sale_ids": ["9991491", "9991540", "9991568"]
+}
+]
