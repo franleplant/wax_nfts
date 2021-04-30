@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import "./Loading.css"
+import React, { useState, useEffect } from "react";
+import "./Loading.css";
 
 const TIME = [
   "🕐",
@@ -14,28 +14,28 @@ const TIME = [
   "🕙",
   "🕚",
   "🕛",
-]
+];
 
 export interface IProps {
   //TODO
-  style?: any
+  style?: any;
 }
 
 export default function Loading(props: IProps) {
-  const [index, setIndex] = useState(0)
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex(index => (index + 1) % TIME.length)
-    }, 500)
+      setIndex((index) => (index + 1) % TIME.length);
+    }, 500);
 
     return () => {
-      clearInterval(timer)
-    }
-  }, [])
+      clearInterval(timer);
+    };
+  }, []);
   return (
     <span className="text-center" style={props.style}>
       {TIME[index]}
     </span>
-  )
+  );
 }

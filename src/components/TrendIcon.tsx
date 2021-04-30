@@ -1,26 +1,26 @@
-import React from "react"
+import React from "react";
 
 export interface IProps {
-  trend: "up" | "down" | "equal"
+  trend: "up" | "down" | "equal";
 }
 
 export default function TrendIcon({ trend }: IProps) {
-  return <span>{getIcon(trend)}</span>
+  return <span>{getIcon(trend)}</span>;
 }
 
 function getIcon(trend: "up" | "down" | "equal"): string {
   switch (trend) {
     case "up": {
-      return "👍"
+      return "👍";
     }
     case "down": {
-      return "👎"
+      return "👎";
     }
     case "equal": {
-      return "🤞"
+      return "🤞";
     }
     default: {
-      return ""
+      return "";
     }
   }
 }

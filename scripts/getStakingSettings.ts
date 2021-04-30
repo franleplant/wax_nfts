@@ -1,43 +1,43 @@
-import fs from "fs"
-import fetch from "cross-fetch"
-import _ from "lodash"
+import fs from "fs";
+import fetch from "cross-fetch";
+import _ from "lodash";
 
 // TODO move to env
-const URL = "https://chain.wax.io/v1/chain/get_table_rows"
+const URL = "https://chain.wax.io/v1/chain/get_table_rows";
 
 export interface IResponse {
-  next_key: string
-  more: boolean
-  rows: Array<ICollectionStakingSettings>
+  next_key: string;
+  more: boolean;
+  rows: Array<ICollectionStakingSettings>;
 }
 
 export interface ICollectionStakingSettings {
-  id: string
-  contract: string
-  author: string
-  collection: string
-  schema: string
-  name_id: string
-  img_id: string
+  id: string;
+  contract: string;
+  author: string;
+  collection: string;
+  schema: string;
+  name_id: string;
+  img_id: string;
   /**
    * the value of this key will be used to look for
    * the rarity of the assets, by doing the following
    * asset.data[rarity_id]
    */
-  rarity_id: string
-  rarities: Array<IRarity>
-  r1: number
-  r2: number
-  r3: number
+  rarity_id: string;
+  rarities: Array<IRarity>;
+  r1: number;
+  r2: number;
+  r3: number;
 }
 
 export interface IRarity {
-  rarity: string
-  uniq_assets: number
-  one_asset_value: number
-  collection_value: number
-  r1: number
-  r2: number
+  rarity: string;
+  uniq_assets: number;
+  one_asset_value: number;
+  collection_value: number;
+  r1: number;
+  r2: number;
 }
 
 /**
@@ -62,22 +62,22 @@ export async function getStakingConf(): Promise<IResponse> {
       reverse: false,
       show_payer: false,
     }),
-  })
-  const data = await res.json()
+  });
+  const data = await res.json();
 
-  return data
+  return data;
 }
 
 export default async function main(): Promise<void> {
-  const { rows } = await getStakingConf()
-  const path = `./src/data/staking.json`
-  fs.writeFileSync(path, JSON.stringify(rows, null, 2))
-  console.log("wrote", path)
+  const { rows } = await getStakingConf();
+  const path = `./src/data/staking.json`;
+  fs.writeFileSync(path, JSON.stringify(rows, null, 2));
+  console.log("wrote", path);
 
-  const byCollection = _.groupBy(rows, "collection")
-  const pathGrouped = `./src/data/staking_grouped.json`
-  fs.writeFileSync(pathGrouped, JSON.stringify(byCollection, null, 2))
-  console.log("wrote", pathGrouped)
+  const byCollection = _.groupBy(rows, "collection");
+  const pathGrouped = `./src/data/staking_grouped.json`;
+  fs.writeFileSync(pathGrouped, JSON.stringify(byCollection, null, 2));
+  console.log("wrote", pathGrouped);
 }
 
-main().then(console.log, console.error)
+main().then(console.log, console.error);

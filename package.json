@@ -20,6 +20,7 @@
     "gatsby-plugin-sharp": "^2.6.43",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-sharp": "^2.5.19",
+    "immer": "^9.0.2",
     "isomorphic-fetch": "^3.0.0",
     "jsdom": "^16.4.0",
     "lodash": "^4.17.21",

@@ -1,13 +1,13 @@
-import React from "react"
-import { Card } from "antd"
-import { Sale } from "../dal/atomicmarket"
+import React from "react";
+import { Card } from "antd";
+import { Sale } from "../dal/atomicmarket";
 
 export interface IProps {
-  sale: Sale
+  sale: Sale;
 }
 
 export default function AssetSale(props: IProps): JSX.Element {
-  const { sale } = props
+  const { sale } = props;
 
   // TODOs
   // - handle multiple assets in one sale or ignore this type of sales
@@ -47,5 +47,5 @@ export default function AssetSale(props: IProps): JSX.Element {
         }
       ></Card.Meta>
     </Card>
-  )
+  );
 }

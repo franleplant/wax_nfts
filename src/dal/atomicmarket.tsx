@@ -1,17 +1,25 @@
-import fetch from "cross-fetch"
+import fetch from "cross-fetch";
 import {
   Sale,
+  SaleParams,
   SaleSort,
   SortOrder,
-} from "atomicmarket/build/API/Explorer/Types"
-import { useQuery, UseQueryResult } from "react-query"
-import { ExplorerApi } from "atomicmarket"
+  SaleState,
+} from "atomicmarket/build/API/Explorer/Types";
+import { useQuery, UseQueryResult, useQueryClient } from "react-query";
+import produce from "immer";
+import { ExplorerApi } from "atomicmarket";
 
-const URL = "https://wax.api.atomicassets.io"
-const NAMESPACE = "atomicmarket"
-const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any })
+const URL = "https://wax.api.atomicassets.io";
+const NAMESPACE = "atomicmarket";
+const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any });
 
-export { Sale }
+export { Sale, SaleParams, SaleSort, SortOrder, SaleState };
+
+const defaultSaleParams = {
+  state: [1],
+  symbol: "WAX",
+};
 
 /**
  * Retrieve atomicmarket sales.
@@ -19,30 +27,37 @@ export { Sale }
  * @param options filtering options
  * @returns resulting sales
  */
-export function useSales(options: {
-  collection: string
-  search?: string
-  page: 1
-  limit: 40
-}): UseQueryResult<Array<Sale>> {
+export function useSales(
+  userOptions: SaleParams,
+  page?: number,
+  limit?: number
+): UseQueryResult<Array<Sale>> {
+  const params = { ...defaultSaleParams, ...userOptions };
+  const queryClient = useQueryClient();
+  const queryKey = `sales`;
+
+  // TODO batch
   return useQuery<Array<Sale>>({
-    queryKey: `sales`,
+    queryKey,
     queryFn: async () => {
-      const sales = await api.getSales(
-        {
-          state: [1],
-          collection_name: options.collection,
-          // template_id,
-          // schema_name,
-          //match: options.search ? options.search : undefined, // FIXME must not be sent when not used
-          sort: SaleSort.Price,
-          order: SortOrder.Asc,
-          symbol: "WAX",
-        },
-        options.page,
-        options.limit
-      )
-      return sales
+      const sales = await api.getSales(params, page, limit);
+      return sales;
     },
-  })
+    onSuccess: (newSales) => {
+      queryClient.setQueryData(
+        queryKey,
+        produce<Array<Sale>>((oldSales) => {
+          for (const newSale of newSales) {
+            const index = oldSales.findIndex(
+              (sale) => sale.sale_id === newSale.sale_id
+            );
+            if (!index) {
+              continue;
+            }
+            oldSales[index] = newSale;
+          }
+        })
+      );
+    },
+  });
 }

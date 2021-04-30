@@ -1,6 +1,6 @@
-import { createContext } from "react"
-import { ICurrencyExchange } from "../../dal/currency"
+import { createContext } from "react";
+import { ICurrencyExchange } from "../../dal/currency";
 
-const CurrencyExchangeContext = createContext<Array<ICurrencyExchange>>([])
+const CurrencyExchangeContext = createContext<Array<ICurrencyExchange>>([]);
 
-export default CurrencyExchangeContext
+export default CurrencyExchangeContext;

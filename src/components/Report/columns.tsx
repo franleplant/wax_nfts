@@ -1,12 +1,12 @@
-import React from "react"
-import { ColumnsType } from "antd/lib/table"
-import { IReportRow } from "../../dal/report"
-import PriceCell from "./PriceCell"
+import React from "react";
+import { ColumnsType } from "antd/lib/table";
+import { IReportRow, SaleSummary } from "../../dal/report";
+import PriceCell from "./PriceCell";
 
 const columns: ColumnsType<IReportRow> = [
   {
     title: "Template",
-    dataIndex: "template",
+    dataIndex: "template_id",
     //key: 'name',
   },
   {
@@ -28,7 +28,7 @@ const columns: ColumnsType<IReportRow> = [
   },
   {
     title: "Avg Price (WAX)",
-    dataIndex: "avg_price_wax",
+    dataIndex: "price_wax",
   },
   {
     title: "Yield",
@@ -41,24 +41,24 @@ const columns: ColumnsType<IReportRow> = [
   },
   {
     title: "Buy",
-    dataIndex: "sale_ids",
-    render: (value: Array<string> = [], record) => {
+    dataIndex: "sales",
+    render: (value: Array<SaleSummary> = [], record) => {
       return (
         <>
-          {value.map(saleId => (
-            <div key={saleId}>
+          {value.map((sale) => (
+            <div key={sale.sale_id}>
               <a
                 target="_blank"
-                href={`https://wax.atomichub.io/market/sale/${saleId}`}
+                href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}
               >
-                {saleId}
+                {sale.sale_id}
               </a>
             </div>
           ))}
         </>
-      )
+      );
     },
   },
-]
+];
 
-export default columns
+export default columns;

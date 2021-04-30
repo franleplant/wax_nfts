@@ -1,9 +1,9 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Layout } from "antd"
-const { Header, Footer, Sider, Content } = Layout
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Layout } from "antd";
+const { Header, Footer, Sider, Content } = Layout;
 
-import "./main.css"
+import "./main.css";
 
 export default function CustomLayout({ children }: any) {
   return (
@@ -12,5 +12,5 @@ export default function CustomLayout({ children }: any) {
       <Content className="content">{children}</Content>
       <Footer></Footer>
     </Layout>
-  )
+  );
 }

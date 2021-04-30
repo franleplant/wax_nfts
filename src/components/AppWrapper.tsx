@@ -1,7 +1,7 @@
-import React from "react"
-import { QueryClient, QueryClientProvider } from "react-query"
+import React from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 export default function Layout({ children }: any) {
   return (
@@ -10,5 +10,5 @@ export default function Layout({ children }: any) {
         <>{children}</>
       </QueryClientProvider>
     </>
-  )
+  );
 }

@@ -1,25 +1,25 @@
-import React, { useContext } from "react"
-import { IReportRow } from "../../dal/report"
-import { getYield } from "../../domain/currency"
+import React, { useContext } from "react";
+import { IReportRow } from "../../dal/report";
+import { getYield } from "../../domain/currency";
 
-import CurrencyExchangeContext from "./CurrencyExchangeContext"
+import CurrencyExchangeContext from "./CurrencyExchangeContext";
 
 export interface IProps {
-  row: IReportRow
+  row: IReportRow;
 }
 
 export default function PriceCell(props: IProps): JSX.Element {
-  const currencyExchange = useContext(CurrencyExchangeContext)
+  const currencyExchange = useContext(CurrencyExchangeContext);
 
   const {
     avg_staking_price_ratio: avg,
     min_staking_price_ratio: min,
     max_staking_price_ratio: max,
-  } = props.row
+  } = props.row;
 
-  const avgYield = getYield(currencyExchange, avg)
-  const minYield = getYield(currencyExchange, min)
-  const maxYield = getYield(currencyExchange, max)
+  const avgYield = getYield(currencyExchange, avg);
+  const minYield = getYield(currencyExchange, min);
+  const maxYield = getYield(currencyExchange, max);
 
   return (
     <div>
@@ -29,5 +29,5 @@ export default function PriceCell(props: IProps): JSX.Element {
       <div>{`you will ${avgYield.getXFormatted()} x your capital in a year`}</div>
       <div>{`roi ${avgYield.getRoiFormatted()}`}</div>
     </div>
-  )
+  );
 }
