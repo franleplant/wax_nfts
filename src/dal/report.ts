@@ -1,9 +1,14 @@
-import { Sale as AMSale } from "./atomicmarket";
+import { Sale as AMSale, Price } from "./atomicmarket";
+
+export type PriceFlat = {
+  [K in keyof Price as `price.${K}`]: Price[K];
+};
 
 export type SaleSummary = Omit<
   AMSale,
-  "assets" | "collection" | "collection_name"
->;
+  "assets" | "collection" | "collection_name" | "price"
+> &
+  PriceFlat & { staking_price_ratio: number; price_wax: number };
 
 export interface IReportRow {
   template_id: string;

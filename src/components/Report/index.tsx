@@ -1,12 +1,11 @@
-import React, { useEffect, useState, createContext, useMemo } from "react";
+import React, { useMemo } from "react";
 import { Card, Row, Col, Table } from "antd";
-import { IReportRow, SaleSummary } from "../../dal/report";
+import { keyBy } from "lodash";
+import { IReportRow } from "../../dal/report";
+import { calcReportRow } from "../../domain/report";
 import columns from "./columns";
 import { ICurrencyExchange, useGetMarketAll } from "../../dal/currency";
 import CurrencyExchangeContext from "./CurrencyExchangeContext";
-import { useQueries } from "react-query";
-import { flatten, keyBy, omit } from "lodash";
-import produce from "immer";
 import { useSales, Sale } from "../../dal/atomicmarket";
 
 export interface IProps {
@@ -20,7 +19,12 @@ export default function Report(props: IProps): JSX.Element {
 
   // TODO typeinformation is outdated
   // TODO make this query refresh periodically
-  const { data: updatedSales } = useSales({ ids: saleIds } as any);
+  const { data: updatedSales } = useSales({
+    params: { ids: saleIds },
+    queryOptions: {
+      refetchInterval: 2 * 60 * 1000,
+    },
+  });
 
   const dataSource = updateSales(props.data, updatedSales || []);
 
@@ -49,6 +53,7 @@ export function getSaleIds(report: Array<IReportRow>): Array<number> {
   return saleIds;
 }
 
+// TODO recalc ratios apy etyc
 export function updateSales(
   report: Array<IReportRow>,
   updatedSales: Array<Sale>
@@ -58,20 +63,7 @@ export function updateSales(
   ]);
 
   return useMemo(
-    () =>
-      produce(report, (report) => {
-        for (const row of report) {
-          row.sales = row.sales.map((oldSale) => {
-            const newSale = newSalesById[oldSale.sale_id];
-            // TODO abnstract as saleToSaleSummary
-            return omit(newSale, [
-              "collection",
-              "collection_name",
-              "assets",
-            ]) as SaleSummary;
-          });
-        }
-      }),
+    () => report.map((report) => calcReportRow(report, newSalesById)),
     [report, updatedSales]
   );
 }

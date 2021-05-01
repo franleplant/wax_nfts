@@ -5,8 +5,14 @@ import {
   SaleSort,
   SortOrder,
   SaleState,
+  Price,
 } from "atomicmarket/build/API/Explorer/Types";
-import { useQuery, UseQueryResult, useQueryClient } from "react-query";
+import {
+  useQuery,
+  UseQueryResult,
+  useQueryClient,
+  UseQueryOptions,
+} from "react-query";
 import produce from "immer";
 import { ExplorerApi } from "atomicmarket";
 
@@ -14,12 +20,19 @@ const URL = "https://wax.api.atomicassets.io";
 const NAMESPACE = "atomicmarket";
 const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any });
 
-export { Sale, SaleParams, SaleSort, SortOrder, SaleState };
+export { Sale, SaleParams, SaleSort, SortOrder, SaleState, Price };
 
 const defaultSaleParams = {
-  state: [1],
+  //state: [1],
   symbol: "WAX",
 };
+
+export interface IOptions {
+  params: SaleParams & { ids: Array<number> };
+  page?: number;
+  limit?: number;
+  queryOptions?: UseQueryOptions<Array<Sale>, unknown, Array<Sale>>;
+}
 
 /**
  * Retrieve atomicmarket sales.
@@ -27,12 +40,10 @@ const defaultSaleParams = {
  * @param options filtering options
  * @returns resulting sales
  */
-export function useSales(
-  userOptions: SaleParams,
-  page?: number,
-  limit?: number
-): UseQueryResult<Array<Sale>> {
-  const params = { ...defaultSaleParams, ...userOptions };
+export function useSales(options: IOptions): UseQueryResult<Array<Sale>> {
+  const params = { ...defaultSaleParams, ...options.params };
+  const { page, limit, queryOptions } = options;
+
   const queryClient = useQueryClient();
   const queryKey = `sales`;
 
@@ -59,5 +70,6 @@ export function useSales(
         })
       );
     },
+    ...queryOptions,
   });
 }
