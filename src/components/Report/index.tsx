@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import { Card, Row, Col, Table } from "antd";
-import { isEqual, keyBy } from "lodash";
+import { Table } from "antd";
+import { keyBy } from "lodash";
 import { IReportRow } from "../../dal/report";
 import { calcReportRow } from "../../domain/report";
 import columns from "./columns";
-import { ICurrencyExchange, useGetMarketAll } from "../../dal/currency";
+import { useGetMarketAll } from "../../dal/currency";
 import CurrencyExchangeContext from "./CurrencyExchangeContext";
 import { useSales, Sale } from "../../dal/atomicmarket";
 
@@ -70,9 +70,9 @@ export function useUpdateSales(
   }, [updatedSales]);
 
   return useMemo(() => {
-    if (updatedSales.length === 0) {
-      return report;
-    }
+    //if (updatedSales.length === 0) {
+    //return report;
+    //}
     return report.map((report) => calcReportRow(report, newSalesById));
-  }, [report, updatedSales]);
+  }, [report, newSalesById]);
 }

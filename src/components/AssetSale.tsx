@@ -29,6 +29,7 @@ export default function AssetSale(props: IProps): JSX.Element {
         title={
           <a
             target="_blank"
+            rel="noreferrer"
             href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}
           >
             {sale.assets[0].name}

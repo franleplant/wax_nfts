@@ -11,16 +11,15 @@ import report from "../data/report.json";
 import { IReportRow } from "../dal/report";
 import Report from "../components/Report";
 import PricesTable from "../components/PricesTable";
+import moment from "moment";
 
 export interface IData {
-  data: {
-    site: {
-      buildTime: string;
-    };
+  site: {
+    buildTime: string;
   };
 }
 
-export default function Index(props: PageProps<IData>) {
+export default function Index(props: PageProps<IData>): JSX.Element {
   return (
     <Layout>
       <SEO />
@@ -29,6 +28,10 @@ export default function Index(props: PageProps<IData>) {
           <Content currencyExchange={currencyExchange} />
         )}
       </AsyncManager>
+      <p>
+        rendered on{" "}
+        {moment(props.data?.site?.buildTime).format("YYYY-MM-DD HH:mm")}
+      </p>
     </Layout>
   );
 }
@@ -70,7 +73,7 @@ function Content(props: {
 export const query = graphql`
   query buildTime {
     site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+      buildTime
     }
   }
 `;

@@ -1,11 +1,14 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import { Layout } from "antd";
-const { Header, Footer, Sider, Content } = Layout;
+const { Header, Footer, Content } = Layout;
 
 import "./main.css";
 
-export default function CustomLayout({ children }: any) {
+export interface IProps {
+  children: JSX.Element | Array<JSX.Element> | string | null;
+}
+
+export default function CustomLayout({ children }: IProps): JSX.Element {
   return (
     <Layout>
       <Header>NFT!</Header>

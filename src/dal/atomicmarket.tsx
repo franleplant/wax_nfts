@@ -10,10 +10,9 @@ import {
 import {
   useQuery,
   UseQueryResult,
-  useQueryClient,
+  //useQueryClient,
   UseQueryOptions,
 } from "react-query";
-import produce from "immer";
 import { ExplorerApi } from "atomicmarket";
 
 const URL = "https://wax.api.atomicassets.io";
@@ -44,7 +43,7 @@ export function useSales(options?: IOptions): UseQueryResult<Array<Sale>> {
   const params = { ...defaultSaleParams, ...options?.params };
   const { page, limit, queryOptions } = options || {};
 
-  const queryClient = useQueryClient();
+  //const queryClient = useQueryClient();
   const queryKey = `sales`;
 
   // TODO batch

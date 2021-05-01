@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Button, Form, InputNumber } from "antd";
+import React, { useState } from "react";
+import { Form, InputNumber } from "antd";
 import { getYield } from "../domain/currency";
 import { ICurrencyExchange } from "../dal/currency";
 

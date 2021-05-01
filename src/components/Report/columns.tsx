@@ -42,13 +42,14 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Buy",
     dataIndex: "sales",
-    render: (value: Array<SaleSummary> = [], record) => {
+    render: (value: Array<SaleSummary> = [], _record): JSX.Element => {
       return (
         <>
           {value.map((sale) => (
             <div key={sale.sale_id}>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}
               >
                 {sale.sale_id}

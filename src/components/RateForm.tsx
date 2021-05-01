@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, InputNumber } from "antd";
 import { ICurrencyExchange } from "../dal/currency";
-import {
-  getAetherInWax,
-  getConverters,
-  getWaxInUSDT,
-} from "../domain/currency";
+import { getConverters } from "../domain/currency";
 
 export interface IForm {
   aether: number;

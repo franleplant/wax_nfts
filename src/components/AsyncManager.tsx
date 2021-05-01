@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Skeleton, Empty, notification } from "antd";
+import { Skeleton, Empty } from "antd";
 import { UseQueryResult } from "react-query";
 //import useDeepCompareEffect from "use-deep-compare-effect";
 
@@ -59,7 +59,7 @@ export default function AsyncManager<TLoadedData extends Array<unknown>>(
 
 // the default imple will check that every element in the list of
 // loaded data is undefined
-export function defaultIsEmpty(loadedData: Array<any>): boolean {
+export function defaultIsEmpty(loadedData: Array<unknown>): boolean {
   return loadedData.every((element) => !element);
 }
 
