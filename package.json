@@ -3,7 +3,7 @@
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "franleplant",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "antd": "^4.15.2",
@@ -51,7 +51,7 @@
   ],
   "license": "0BSD",
   "scripts": {
-    "get-sales": "ts-node ./scripts/getSalesStaking.ts",
+    "get-report": "ts-node ./scripts/getReport.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "build": "gatsby build",
