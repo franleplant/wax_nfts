@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Table } from "antd";
 import { getAllInUSDT, IRates, Token, convert } from "../../domain/currency";
 import { ICurrencyExchange } from "../../dal/currency";
+import USDT_ICON from "../../images/TOKEN_USDT.png";
 import WAX_ICON from "../../images/TOKEN_WAX.svg";
 import AETHER_ICON from "../../images/TOKEN_AETHER.png";
 import CAPONIUM_ICON from "../../images/TOKEN_CAPON.png";
@@ -13,7 +14,7 @@ import RateHead from "./RateHead";
 import RateContext, { IRateContext, IForm } from "./RateContext";
 
 const Icons: Record<Token, string> = {
-  usdt: "",
+  usdt: USDT_ICON,
   wax: WAX_ICON,
   aether: AETHER_ICON,
   caponium: CAPONIUM_ICON,
