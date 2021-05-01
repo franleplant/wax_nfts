@@ -9,6 +9,7 @@ import ENEFT_ICON from "../../images/TOKEN_ENEFT.png";
 import WAXON_ICON from "../../images/TOKEN_WAXON.png";
 import WECAN_ICON from "../../images/TOKEN_WECAN.png";
 import RateCell from "./RateCell";
+import RateHead from "./RateHead";
 import RateContext, { IRateContext, IForm } from "./RateContext";
 
 const Icons: Record<Token, string> = {
@@ -51,6 +52,9 @@ export default function PricesTable(props: IProps): JSX.Element {
     onChange: (tokenFrom) => (newValue) => {
       setForm(calcNewState(rates, tokenFrom, newValue));
     },
+    reset: () => {
+      setForm(calcNewState(rates, Token.USDT, 1));
+    },
   } as IRateContext;
 
   return (
@@ -84,7 +88,7 @@ export default function PricesTable(props: IProps): JSX.Element {
             },
           },
           {
-            title: "Rate",
+            title: RateHead,
             dataIndex: "price",
             render: (_value: number, row) => <RateCell row={row} />,
           },

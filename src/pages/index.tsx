@@ -44,7 +44,7 @@ function Content(props: {
   return (
     <>
       <Row justify="start" gutter={5}>
-        <Col sm={24} lg={12}>
+        <Col sm={24} lg={9}>
           <PricesTable currencyExchange={props.currencyExchange} />
         </Col>
         <Col>
