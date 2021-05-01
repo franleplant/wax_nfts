@@ -86,8 +86,6 @@ export function calcReportRow(
     minBy(activeSales, (sale) => sale.staking_price_ratio)
       ?.staking_price_ratio || 0;
 
-  debugger;
-
   return {
     ...report,
     price_wax,
