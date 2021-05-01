@@ -11,6 +11,16 @@ const ENEFTERIUM = "ENEFT@e.rplanet";
 const WAXON = "WAXON@e.rplanet";
 const CAPONIUM = "CAPON@e.rplanet";
 
+export enum Token {
+  USDT = "usdt",
+  WAX = "wax",
+  AETHER = "aether",
+  WECANITE = "wecanite",
+  ENEFTERIUM = "enefterium",
+  WAXON = "waxon",
+  CAPONIUM = "caponium",
+}
+
 // the price of wax in dollars
 export function getWaxInUSDT(
   exchange: Array<ICurrencyExchange>
@@ -68,13 +78,16 @@ export function getCaponiumInWax(
 }
 
 export function fromWaxToUSDT(
-  currencyInWax: ICurrencyExchange | undefined,
+  currencyInWax: ICurrencyExchange | number | undefined,
   exchange: Array<ICurrencyExchange>
 ): number {
   const waxInUSDT = getWaxInUSDT(exchange)?.last_price || 0;
-  const priceInWax = currencyInWax?.last_price || 0;
+  const priceInWax =
+    typeof currencyInWax === "object"
+      ? currencyInWax.last_price
+      : currencyInWax;
 
-  return priceInWax * waxInUSDT;
+  return (priceInWax || 0) * waxInUSDT;
 }
 
 // Aether priced in usdt
@@ -84,7 +97,9 @@ export function getAetherInUSDT(exchange: Array<ICurrencyExchange>): number {
   return fromWaxToUSDT(aetherInWax, exchange);
 }
 
-export function getAllInUSDT(exchange: Array<ICurrencyExchange>) {
+export type IRates = Record<Token, number>;
+
+export function getAllInUSDT(exchange: Array<ICurrencyExchange>): IRates {
   const wax = getWaxInUSDT(exchange)?.last_price || 0;
   const aether = fromWaxToUSDT(getAetherInWax(exchange), exchange);
   const wecanite = fromWaxToUSDT(getWecaniteInWax(exchange), exchange);
@@ -93,6 +108,7 @@ export function getAllInUSDT(exchange: Array<ICurrencyExchange>) {
   const caponium = fromWaxToUSDT(getCaponiumInWax(exchange), exchange);
 
   return {
+    usdt: 1,
     wax,
     aether,
     wecanite,
@@ -102,27 +118,12 @@ export function getAllInUSDT(exchange: Array<ICurrencyExchange>) {
   };
 }
 
-export type CurrencyConverter = (currency: number) => number;
-
-export function getConverters(exchange: Array<ICurrencyExchange>) {
-  const aetherInWax = getAetherInWax(exchange);
-  const waxInUSDT = getWaxInUSDT(exchange);
-
-  const aetherToWax: CurrencyConverter = (aether) =>
-    (aetherInWax?.last_price || 0) * aether;
-  const waxToAether: CurrencyConverter = (wax) =>
-    wax / (aetherInWax?.last_price || 1);
-  const waxToUsdt: CurrencyConverter = (wax) =>
-    (waxInUSDT?.last_price || 0) * wax;
-  const usdtToWax: CurrencyConverter = (usdt) =>
-    usdt / (waxInUSDT?.last_price || 1);
-
-  return {
-    aetherToWax,
-    waxToAether,
-    waxToUsdt,
-    usdtToWax,
-  };
+/**
+ * convert a quantity from one token into another
+ * based off of the USDT value of each
+ */
+export function convert(valueInUsdt: number, to: Token, rates: IRates): number {
+  return valueInUsdt / rates[to];
 }
 
 export class Yield {
