@@ -42,7 +42,10 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Buy",
     dataIndex: "sales",
-    render: (value: Array<SaleSummary> = [], _record): JSX.Element => {
+    render: (
+      value: Array<SaleSummary> = [],
+      _record: IReportRow
+    ): JSX.Element => {
       return (
         <>
           {value.map((sale) => (
