@@ -3,7 +3,11 @@ import { PageProps, Link, graphql } from "gatsby";
 import { Card, Row, Col, Table } from "antd";
 import SEO from "../components/seo";
 import { useGetMarketAll, ICurrencyExchange } from "../dal/currency";
-import { getAetherInUSDT, getWaxInUSDT } from "../domain/currency";
+import {
+  getAetherInUSDT,
+  getAllInUSDT,
+  getWaxInUSDT,
+} from "../domain/currency";
 import Layout from "../components/Layout";
 import Price from "../components/Price";
 import RateForm from "../components/RateForm";
@@ -42,6 +46,7 @@ function Content(props: {
 }): JSX.Element {
   const aether = getAetherInUSDT(props.currencyExchange) || 0;
   const wax = getWaxInUSDT(props.currencyExchange)?.last_price || 0;
+  const rates = getAllInUSDT(props.currencyExchange);
 
   const reportData: Array<IReportRow> = report;
   return (
@@ -49,8 +54,16 @@ function Content(props: {
       <Row justify="start" gutter={5}>
         <Col>
           <Card bordered style={{ maxWidth: "350px" }} title={"Rates"}>
-            <Price price={aether} quoteLabel="AETHER" baseLabel="USDT" />
-            <Price price={wax} quoteLabel="WAX" baseLabel="USDT" />
+            <Price price={rates.aether} quoteLabel="AETHER" baseLabel="USDT" />
+            <Price price={rates.wax} quoteLabel="WAX" baseLabel="USDT" />
+            <Price price={rates.waxon} quoteLabel="WAXON" baseLabel="USDT" />
+            <Price price={rates.caponium} quoteLabel="CAPON" baseLabel="USDT" />
+            <Price price={rates.wecanite} quoteLabel="WECAN" baseLabel="USDT" />
+            <Price
+              price={rates.enefterium}
+              quoteLabel="ENEFT"
+              baseLabel="USDT"
+            />
           </Card>
         </Col>
         <Col>

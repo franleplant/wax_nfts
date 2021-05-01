@@ -84,6 +84,24 @@ export function getAetherInUSDT(exchange: Array<ICurrencyExchange>): number {
   return fromWaxToUSDT(aetherInWax, exchange);
 }
 
+export function getAllInUSDT(exchange: Array<ICurrencyExchange>) {
+  const wax = getWaxInUSDT(exchange)?.last_price || 0;
+  const aether = fromWaxToUSDT(getAetherInWax(exchange), exchange);
+  const wecanite = fromWaxToUSDT(getWecaniteInWax(exchange), exchange);
+  const enefterium = fromWaxToUSDT(getEnefteriumInWax(exchange), exchange);
+  const waxon = fromWaxToUSDT(getWaxonInWax(exchange), exchange);
+  const caponium = fromWaxToUSDT(getCaponiumInWax(exchange), exchange);
+
+  return {
+    wax,
+    aether,
+    wecanite,
+    enefterium,
+    waxon,
+    caponium,
+  };
+}
+
 export type CurrencyConverter = (currency: number) => number;
 
 export function getConverters(exchange: Array<ICurrencyExchange>) {
