@@ -66,12 +66,10 @@ export function useUpdateSales(
   updatedSales: Array<Sale>
 ): Array<IReportRow> {
   const newSalesById = useMemo(() => {
-    console.log("fuck");
     return keyBy(updatedSales, "sale_id");
   }, [updatedSales]);
 
   return useMemo(() => {
-    console.log("double fuck");
     if (updatedSales.length === 0) {
       return report;
     }

@@ -60,7 +60,6 @@ export function calcReportRow(
 ): IReportRow {
   const assets: Array<string> = [];
 
-  console.log(report.sales);
   const activeSales = report.sales
     // replace the oldSales with the newest we just fetched
     .map((oldSale) => updatedSalesById[oldSale.sale_id])
