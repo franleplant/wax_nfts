@@ -52,7 +52,6 @@
   "license": "0BSD",
   "scripts": {
     "get-sales": "ts-node ./scripts/getSalesStaking.ts",
-    "get-staking": "ts-node ./scripts/getStakingSettings.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "build": "gatsby build",
