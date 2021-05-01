@@ -3,42 +3,92 @@ import { ICurrencyExchange } from "../dal/currency";
 
 // The quote_token is the token being priced
 // in the base_token
-const WAX_USDT = "WAX@eosio.token";
-const AETHER_WAX = "AETHER@e.rplanet";
+const USDT = "WAXUSDT@eth.token";
+const WAX = "WAX@eosio.token";
+const AETHER = "AETHER@e.rplanet";
+const WECANITE = "WECAN@e.rplanet";
+const ENEFTERIUM = "ENEFT@e.rplanet";
+const WAXON = "WAXON@e.rplanet";
+const CAPONIUM = "CAPON@e.rplanet";
 
 // the price of wax in dollars
 export function getWaxInUSDT(
-  marketData: Array<ICurrencyExchange>
+  exchange: Array<ICurrencyExchange>
 ): ICurrencyExchange | undefined {
-  return marketData.find((market) => market.quote_token.str === WAX_USDT);
+  return exchange.find(
+    ({ quote_token, base_token }) =>
+      quote_token.str === WAX && base_token.str === USDT
+  );
 }
 
 // the price of aether in wax
 export function getAetherInWax(
-  marketData: Array<ICurrencyExchange>
+  exchange: Array<ICurrencyExchange>
 ): ICurrencyExchange | undefined {
-  return marketData.find(
-    (market) =>
-      market.quote_token.str === AETHER_WAX &&
-      market.base_token.str === "WAX@eosio.token"
+  return exchange.find(
+    ({ quote_token, base_token }) =>
+      quote_token.str === AETHER && base_token.str === WAX
   );
 }
 
+export function getWecaniteInWax(
+  exchange: Array<ICurrencyExchange>
+): ICurrencyExchange | undefined {
+  return exchange.find(
+    ({ quote_token, base_token }) =>
+      quote_token.str === WECANITE && base_token.str === WAX
+  );
+}
+
+export function getEnefteriumInWax(
+  exchange: Array<ICurrencyExchange>
+): ICurrencyExchange | undefined {
+  return exchange.find(
+    ({ quote_token, base_token }) =>
+      quote_token.str === ENEFTERIUM && base_token.str === WAX
+  );
+}
+
+export function getWaxonInWax(
+  exchange: Array<ICurrencyExchange>
+): ICurrencyExchange | undefined {
+  return exchange.find(
+    ({ quote_token, base_token }) =>
+      quote_token.str === WAXON && base_token.str === WAX
+  );
+}
+
+export function getCaponiumInWax(
+  exchange: Array<ICurrencyExchange>
+): ICurrencyExchange | undefined {
+  return exchange.find(
+    ({ quote_token, base_token }) =>
+      quote_token.str === CAPONIUM && base_token.str === WAX
+  );
+}
+
+export function fromWaxToUSDT(
+  currencyInWax: ICurrencyExchange | undefined,
+  exchange: Array<ICurrencyExchange>
+): number {
+  const waxInUSDT = getWaxInUSDT(exchange)?.last_price || 0;
+  const priceInWax = currencyInWax?.last_price || 0;
+
+  return priceInWax * waxInUSDT;
+}
+
 // Aether priced in usdt
-export function getAetherInUSDT(marketData: Array<ICurrencyExchange>): number {
-  const waxInUSDT = getWaxInUSDT(marketData)?.last_price || 0;
-  const aetherInWax = getAetherInWax(marketData)?.last_price || 0;
+export function getAetherInUSDT(exchange: Array<ICurrencyExchange>): number {
+  const aetherInWax = getAetherInWax(exchange);
 
-  const price = aetherInWax * waxInUSDT;
-
-  return price;
+  return fromWaxToUSDT(aetherInWax, exchange);
 }
 
 export type CurrencyConverter = (currency: number) => number;
 
-export function getConverters(marketData: Array<ICurrencyExchange>) {
-  const aetherInWax = getAetherInWax(marketData);
-  const waxInUSDT = getWaxInUSDT(marketData);
+export function getConverters(exchange: Array<ICurrencyExchange>) {
+  const aetherInWax = getAetherInWax(exchange);
+  const waxInUSDT = getWaxInUSDT(exchange);
 
   const aetherToWax: CurrencyConverter = (aether) =>
     (aetherInWax?.last_price || 0) * aether;
@@ -118,11 +168,11 @@ export class Yield {
 }
 
 export function getYield(
-  marketData: Array<ICurrencyExchange>,
+  exchange: Array<ICurrencyExchange>,
   stakingRewardRatio: number
 ): Yield {
-  const waxInUsdt = getWaxInUSDT(marketData)?.last_price || 0;
-  const aetherInUsdt = getAetherInUSDT(marketData);
+  const waxInUsdt = getWaxInUSDT(exchange)?.last_price || 0;
+  const aetherInUsdt = getAetherInUSDT(exchange);
 
   // The anualised percentage yield in usd dollars.
   // A/W = stakingRewardRatio is in Aether / Wax
