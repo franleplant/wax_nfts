@@ -12,10 +12,14 @@ export interface IProps {
   data: Array<IReportRow>;
 }
 
+const fuck: any = [];
+
 export default function Report(props: IProps): JSX.Element {
   const { data: currencyExchange } = useGetMarketAll();
 
-  const saleIds = getSaleIds(props.data);
+  const report = props.data;
+
+  const saleIds = getSaleIds(report);
 
   // TODO typeinformation is outdated
   // TODO make this query refresh periodically
@@ -26,7 +30,8 @@ export default function Report(props: IProps): JSX.Element {
     },
   });
 
-  const dataSource = updateSales(props.data, updatedSales || []);
+  //const dataSource = updateSales(report, updatedSales || []);
+  const dataSource = updateSales(report, fuck as any);
 
   return (
     <CurrencyExchangeContext.Provider value={currencyExchange || []}>
@@ -34,6 +39,7 @@ export default function Report(props: IProps): JSX.Element {
         dataSource={dataSource}
         columns={columns}
         style={{ width: "100%" }}
+        rowKey={"template_id"}
       />
     </CurrencyExchangeContext.Provider>
   );
@@ -58,12 +64,13 @@ export function updateSales(
   report: Array<IReportRow>,
   updatedSales: Array<Sale>
 ): Array<IReportRow> {
-  const newSalesById = useMemo(() => keyBy(updatedSales, "sale_id"), [
-    updatedSales,
-  ]);
+  const newSalesById = useMemo(() => {
+    console.log("fuck");
+    return keyBy(updatedSales, "sale_id");
+  }, [updatedSales]);
 
-  return useMemo(
-    () => report.map((report) => calcReportRow(report, newSalesById)),
-    [report, updatedSales]
-  );
+  return useMemo(() => {
+    console.log("double fuck");
+    return report.map((report) => calcReportRow(report, newSalesById));
+  }, [report, updatedSales]);
 }

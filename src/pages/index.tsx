@@ -13,9 +13,11 @@ import NFT from "../components/NFT";
 import { useSales, Sale } from "../dal/atomicmarket";
 import AssetSale from "../components/AssetSale";
 import APY from "../components/APY";
-import report from "../data/report.json";
+import reportFuck from "../data/report.json";
 import { IReportRow } from "../dal/report";
 import Report from "../components/Report";
+
+const report = reportFuck.slice(0, 2);
 
 export interface IData {
   data: {
@@ -74,15 +76,6 @@ function Content(props: {
       <Row>
         <Report data={reportData} />
       </Row>
-      {/*
-      <Row gutter={10}>
-        {props.assets.map(asset => (
-          <Col>
-            <NFT key={asset.asset_id} asset={asset} />
-          </Col>
-        ))}
-      </Row>
-*/}
     </>
   );
 }

@@ -60,11 +60,12 @@ export function calcReportRow(
 ): IReportRow {
   const assets: Array<string> = [];
 
+  console.log(report.sales);
   const activeSales = report.sales
     // replace the oldSales with the newest we just fetched
     .map((oldSale) => updatedSalesById[oldSale.sale_id])
     // filter out the sales that are not active
-    .filter((sale) => sale.sale_state === SaleState.Listed)
+    .filter((sale) => sale?.sale_state === SaleState.Listed)
     // save the full Sale's asset
     .map((sale) => {
       // ugly side effect, sorry
