@@ -28,7 +28,7 @@ const defaultSaleParams = {
 };
 
 export interface IOptions {
-  params: SaleParams & { ids: Array<number> };
+  params?: SaleParams & { ids: Array<number> };
   page?: number;
   limit?: number;
   queryOptions?: UseQueryOptions<Array<Sale>, unknown, Array<Sale>>;
@@ -40,9 +40,9 @@ export interface IOptions {
  * @param options filtering options
  * @returns resulting sales
  */
-export function useSales(options: IOptions): UseQueryResult<Array<Sale>> {
-  const params = { ...defaultSaleParams, ...options.params };
-  const { page, limit, queryOptions } = options;
+export function useSales(options?: IOptions): UseQueryResult<Array<Sale>> {
+  const params = { ...defaultSaleParams, ...options?.params };
+  const { page, limit, queryOptions } = options || {};
 
   const queryClient = useQueryClient();
   const queryKey = `sales`;
@@ -54,6 +54,8 @@ export function useSales(options: IOptions): UseQueryResult<Array<Sale>> {
       const sales = await api.getSales(params, page, limit);
       return sales;
     },
+    // TODO this fucking thing is breaking everything
+    /*
     onSuccess: (newSales) => {
       queryClient.setQueryData(
         queryKey,
@@ -70,6 +72,7 @@ export function useSales(options: IOptions): UseQueryResult<Array<Sale>> {
         })
       );
     },
+     */
     ...queryOptions,
   });
 }

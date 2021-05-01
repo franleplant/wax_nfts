@@ -9,9 +9,6 @@ import Price from "../components/Price";
 import RateForm from "../components/RateForm";
 import AsyncManager from "../components/AsyncManager";
 import { useAssets, ApiAsset } from "../dal/atomic";
-import NFT from "../components/NFT";
-import { useSales, Sale } from "../dal/atomicmarket";
-import AssetSale from "../components/AssetSale";
 import APY from "../components/APY";
 import reportFuck from "../data/report.json";
 import { IReportRow } from "../dal/report";
@@ -31,9 +28,9 @@ export default function Index(props: PageProps<IData>) {
   return (
     <Layout>
       <SEO />
-      <AsyncManager queries={[useGetMarketAll(), useAssets()]}>
-        {([currencyExchange, assets]) => (
-          <Content currencyExchange={currencyExchange} assets={assets} />
+      <AsyncManager queries={[useGetMarketAll()]}>
+        {([currencyExchange]) => (
+          <Content currencyExchange={currencyExchange} />
         )}
       </AsyncManager>
     </Layout>
@@ -42,7 +39,6 @@ export default function Index(props: PageProps<IData>) {
 
 function Content(props: {
   currencyExchange: Array<ICurrencyExchange>;
-  assets: Array<ApiAsset>;
 }): JSX.Element {
   const aether = getAetherInUSDT(props.currencyExchange) || 0;
   const wax = getWaxInUSDT(props.currencyExchange)?.last_price || 0;

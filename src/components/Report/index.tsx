@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Card, Row, Col, Table } from "antd";
-import { keyBy } from "lodash";
+import { isEqual, keyBy } from "lodash";
 import { IReportRow } from "../../dal/report";
 import { calcReportRow } from "../../domain/report";
 import columns from "./columns";
@@ -12,14 +12,14 @@ export interface IProps {
   data: Array<IReportRow>;
 }
 
-const fuck: any = [];
+const EMPTY_ARRAY: any = [];
 
 export default function Report(props: IProps): JSX.Element {
   const { data: currencyExchange } = useGetMarketAll();
 
   const report = props.data;
 
-  const saleIds = getSaleIds(report);
+  const saleIds = useSaleIds(report);
 
   // TODO typeinformation is outdated
   // TODO make this query refresh periodically
@@ -27,11 +27,12 @@ export default function Report(props: IProps): JSX.Element {
     params: { ids: saleIds },
     queryOptions: {
       refetchInterval: 2 * 60 * 1000,
+      refetchOnWindowFocus: false,
     },
   });
 
-  //const dataSource = updateSales(report, updatedSales || []);
-  const dataSource = updateSales(report, fuck as any);
+  const dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
+  console.log("report index");
 
   return (
     <CurrencyExchangeContext.Provider value={currencyExchange || []}>
@@ -45,7 +46,7 @@ export default function Report(props: IProps): JSX.Element {
   );
 }
 
-export function getSaleIds(report: Array<IReportRow>): Array<number> {
+export function useSaleIds(report: Array<IReportRow>): Array<number> {
   const saleIds = useMemo(() => {
     const ids = [];
     for (const row of report) {
@@ -60,7 +61,7 @@ export function getSaleIds(report: Array<IReportRow>): Array<number> {
 }
 
 // TODO recalc ratios apy etyc
-export function updateSales(
+export function useUpdateSales(
   report: Array<IReportRow>,
   updatedSales: Array<Sale>
 ): Array<IReportRow> {
@@ -71,6 +72,9 @@ export function updateSales(
 
   return useMemo(() => {
     console.log("double fuck");
+    if (updatedSales.length === 0) {
+      return report;
+    }
     return report.map((report) => calcReportRow(report, newSalesById));
   }, [report, updatedSales]);
 }
