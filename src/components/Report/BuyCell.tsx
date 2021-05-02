@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Tag, Divider } from "antd";
+import { Tag } from "antd";
 import { IReportRow } from "../../dal/report";
 import CurrencyExchangeContext from "./CurrencyExchangeContext";
 import { getWaxInUSDT } from "../../domain/currency";

@@ -13,7 +13,7 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Img",
     dataIndex: "immutable_data",
-    render: (data: any) => {
+    render: (data: any): JSX.Element => {
       const img = data.img;
       let isUrl = true;
       try {
@@ -57,7 +57,7 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Aether / Hour",
     dataIndex: "aether_hour",
-    render: (value: number) => {
+    render: (value: number): JSX.Element => {
       return <>{value.toFixed(2)}</>;
     },
   },
