@@ -80,6 +80,11 @@ export function useUpdateSales(
         .map((report) => calcReportRow(report, newSalesById))
         // remove sold out templates
         .filter((report) => report.sales.length > 0)
+        // resort by highest yield
+        .sort(
+          (reportA, reportB) =>
+            reportB.avg_staking_price_ratio - reportA.avg_staking_price_ratio
+        )
     );
   }, [report, newSalesById]);
 }

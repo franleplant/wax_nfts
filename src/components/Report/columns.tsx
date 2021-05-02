@@ -1,13 +1,30 @@
 import React from "react";
 import { ColumnsType } from "antd/lib/table";
 import { IReportRow, SaleSummary } from "../../dal/report";
+import YieldCell from "./YieldCell";
 import PriceCell from "./PriceCell";
 
 const columns: ColumnsType<IReportRow> = [
   {
     title: "Template",
     dataIndex: "template_id",
-    //key: 'name',
+  },
+  {
+    title: "Img",
+    dataIndex: "immutable_data",
+    render: (data: any) => {
+      const img = data.img;
+      let isUrl = true;
+      try {
+        new URL(img);
+      } catch (err) {
+        isUrl = false;
+      }
+
+      const url = isUrl ? img : `https://ipfs.io/ipfs/${img}`;
+
+      return <img src={url} style={{ width: "100px" }} />;
+    },
   },
   {
     title: "Name",
@@ -29,11 +46,12 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Avg Price (WAX)",
     dataIndex: "avg_price_wax",
+    render: (priceWax: number, record) => <PriceCell row={record} />,
   },
   {
     title: "Yield",
     dataIndex: "avg_staking_price_ratio",
-    render: (_value, record) => <PriceCell row={record} />,
+    render: (_value, record) => <YieldCell row={record} />,
   },
   {
     title: "Aether / Hour",

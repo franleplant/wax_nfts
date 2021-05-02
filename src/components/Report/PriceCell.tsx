@@ -1,8 +1,14 @@
 import React, { useContext } from "react";
 import { IReportRow } from "../../dal/report";
-import { getYield } from "../../domain/currency";
+import { getWaxInUSDT } from "../../domain/currency";
 
 import CurrencyExchangeContext from "./CurrencyExchangeContext";
+
+const priceFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+});
 
 export interface IProps {
   row: IReportRow;
@@ -11,23 +17,16 @@ export interface IProps {
 export default function PriceCell(props: IProps): JSX.Element {
   const currencyExchange = useContext(CurrencyExchangeContext);
 
-  const {
-    avg_staking_price_ratio: avg,
-    min_staking_price_ratio: min,
-    max_staking_price_ratio: max,
-  } = props.row;
+  const waxInUSDT = getWaxInUSDT(currencyExchange)?.last_price || 0;
 
-  const avgYield = getYield(currencyExchange, avg);
-  const minYield = getYield(currencyExchange, min);
-  const maxYield = getYield(currencyExchange, max);
+  const priceWax = props.row.avg_price_wax;
+  const priceUSDT = priceWax * waxInUSDT;
 
   return (
-    <div>
-      <div>{`avg APY ${avgYield.getApyFormatted()} %`}</div>
-      <div>{`min APY ${minYield.getApyFormatted()} - max APY ${maxYield.getApyFormatted()}`}</div>
-      <div>{`avg hourly yield ${avgYield.getHpyFormatted()} %`}</div>
-      <div>{`you will ${avgYield.getXFormatted()} x your capital in a year`}</div>
-      <div>{`roi ${avgYield.getRoiFormatted()}`}</div>
-    </div>
+    <>
+      {`${priceWax.toFixed(2)} wax`}
+      {` `}
+      {`(${priceFormatter.format(priceUSDT)})`}
+    </>
   );
 }
