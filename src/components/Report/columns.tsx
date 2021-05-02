@@ -28,7 +28,7 @@ const columns: ColumnsType<IReportRow> = [
   },
   {
     title: "Avg Price (WAX)",
-    dataIndex: "price_wax",
+    dataIndex: "avg_price_wax",
   },
   {
     title: "Yield",

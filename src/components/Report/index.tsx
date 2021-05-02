@@ -18,6 +18,7 @@ export default function Report(props: IProps): JSX.Element {
   const { data: currencyExchange } = useGetMarketAll();
 
   const report = props.data;
+  console.log("original", report[0]);
 
   const saleIds = useSaleIds(report);
 
@@ -30,9 +31,12 @@ export default function Report(props: IProps): JSX.Element {
       refetchOnWindowFocus: false,
     },
   });
+  console.log("updatedSales", updatedSales);
 
-  const dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
+  //const dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
+  const dataSource = report;
   console.log("report index");
+  console.log("updated", dataSource[0]);
 
   return (
     <CurrencyExchangeContext.Provider value={currencyExchange || []}>

@@ -19,7 +19,7 @@ export interface IReportRow {
   issued_supply: number;
   immutable_data: any;
   count: number;
-  price_wax: number;
+  avg_price_wax: number;
   avg_staking_price_ratio: number;
   min_staking_price_ratio: number;
   max_staking_price_ratio: number;

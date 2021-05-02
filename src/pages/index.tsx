@@ -39,7 +39,12 @@ export default function Index(props: PageProps<IData>): JSX.Element {
 function Content(props: {
   currencyExchange: Array<ICurrencyExchange>;
 }): JSX.Element {
-  const reportData: Array<IReportRow> = report;
+  const reportData: Array<IReportRow> = (report.report as Array<IReportRow>).map(
+    (r) => ({
+      ...r,
+      avg_price_wax: Number(r.avg_price_wax),
+    })
+  );
 
   return (
     <>

@@ -89,7 +89,7 @@ export default function PricesTable(props: IProps): JSX.Element {
             },
           },
           {
-            title: RateHead,
+            title: () => <RateHead />,
             dataIndex: "price",
             render: (_value: number, row) => <RateCell row={row} />,
           },

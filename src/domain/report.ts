@@ -76,7 +76,7 @@ export function calcReportRow(
     });
 
   const count = activeSales.length;
-  const price_wax = meanBy(activeSales, (sale) => getPriceInWax(sale));
+  const avg_price_wax = meanBy(activeSales, (sale) => getPriceInWax(sale));
   const avg = meanBy(activeSales, (sale) => sale.staking_price_ratio);
   const min =
     minBy(activeSales, (sale) => sale.staking_price_ratio)
@@ -87,7 +87,7 @@ export function calcReportRow(
 
   return {
     ...report,
-    price_wax,
+    avg_price_wax,
     count,
     avg_staking_price_ratio: avg,
     min_staking_price_ratio: min,
