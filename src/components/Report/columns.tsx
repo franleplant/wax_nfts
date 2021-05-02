@@ -7,11 +7,7 @@ import BuyCell from "./BuyCell";
 
 const columns: ColumnsType<IReportRow> = [
   {
-    title: "Template",
-    dataIndex: "template_id",
-  },
-  {
-    title: "Img",
+    title: "NFT",
     dataIndex: "immutable_data",
     render: (data: any): JSX.Element => {
       const img = data.img;
@@ -26,6 +22,10 @@ const columns: ColumnsType<IReportRow> = [
 
       return <img src={url} style={{ width: "100px" }} />;
     },
+  },
+  {
+    title: "Template",
+    dataIndex: "template_id",
   },
   {
     title: "Name",
