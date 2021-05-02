@@ -23,7 +23,6 @@ export default function Report(props: IProps): JSX.Element {
   const saleIds = useSaleIds(report);
 
   // TODO typeinformation is outdated
-  // TODO make this query refresh periodically
   const { data: updatedSales } = useSales({
     params: { ids: saleIds },
     queryOptions: {
@@ -33,10 +32,12 @@ export default function Report(props: IProps): JSX.Element {
   });
   console.log("updatedSales", updatedSales);
 
-  //const dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
-  const dataSource = report;
-  console.log("report index");
-  console.log("updated", dataSource[0]);
+  const dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
+  //console.log("updated", dataSource2[0]);
+  //const dataSource = dataSource2;
+  ////const dataSource = report;
+  //console.log("report index");
+  ////console.log("updated", dataSource[0]);
 
   return (
     <CurrencyExchangeContext.Provider value={currencyExchange || []}>
@@ -74,9 +75,11 @@ export function useUpdateSales(
   }, [updatedSales]);
 
   return useMemo(() => {
-    //if (updatedSales.length === 0) {
-    //return report;
-    //}
-    return report.map((report) => calcReportRow(report, newSalesById));
+    return (
+      report
+        .map((report) => calcReportRow(report, newSalesById))
+        // remove sold out templates
+        .filter((report) => report.sales.length > 0)
+    );
   }, [report, newSalesById]);
 }

@@ -34,7 +34,7 @@ export function toSaleSummary(sale: AMSale): SaleSummary {
   ]) as SaleSummary;
 
   const flatPrice: any = {};
-  Object.values(sale.price).forEach(([key, value]) => {
+  Object.entries(sale.price).forEach(([key, value]) => {
     flatPrice[`price.${key}`] = value;
   });
 
@@ -58,17 +58,26 @@ export function calcReportRow(
   report: IReportRow,
   updatedSalesById: Record<number, AMSale>
 ): IReportRow {
+  // If there are no updatedSales then there is no need
+  // to re calculate everything
+  if (Object.keys(updatedSalesById).length === 0) {
+    return report;
+  }
+
   const assets: Array<string> = [];
 
   const activeSales = report.sales
     // replace the oldSales with the newest we just fetched
     .map((oldSale) => updatedSalesById[oldSale.sale_id])
+    // ensure we have a new sale, otherwise don't do anything
+    .filter((sale) => !!sale)
     // filter out the sales that are not active
-    .filter((sale) => sale?.sale_state === SaleState.Listed)
+    // TODO bad typing
+    .filter((sale) => (sale as any)?.state === SaleState.Listed)
     // save the full Sale's asset
     .map((sale) => {
       // ugly side effect, sorry
-      const id = sale.assets[0].asset_id;
+      const id = sale.assets?.[0]?.asset_id;
       if (id) {
         assets.push(id.toString());
       }
