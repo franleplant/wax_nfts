@@ -39,6 +39,8 @@ export default function Index(props: PageProps<IData>): JSX.Element {
 function Content(props: {
   currencyExchange: Array<ICurrencyExchange>;
 }): JSX.Element {
+  // report comes with avg_price_wax as a string for some reason,
+  // in here we transform it at the earliest possible
   const reportData: Array<IReportRow> = (report.report as Array<IReportRow>).map(
     (r) => ({
       ...r,
@@ -52,6 +54,7 @@ function Content(props: {
         <Col sm={24} lg={9}>
           <PricesTable currencyExchange={props.currencyExchange} />
         </Col>
+        {/*
         <Col>
           <Card
             bordered
@@ -61,6 +64,7 @@ function Content(props: {
             <RateForm currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
+          */}
         <Col>
           <Card bordered style={{ maxWidth: "350px" }} title={"APY"}>
             <APY currencyExchange={props.currencyExchange} />
