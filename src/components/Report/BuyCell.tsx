@@ -8,7 +8,7 @@ import { getWaxInUSDT } from "../../domain/currency";
 const priceFormatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "USD",
-  maximumFractionDigits: 0,
+  maximumFractionDigits: 1,
 });
 
 export interface IProps {
