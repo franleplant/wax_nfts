@@ -1,8 +1,9 @@
 import React from "react";
 import { ColumnsType } from "antd/lib/table";
-import { IReportRow, SaleSummary } from "../../dal/report";
+import { IReportRow } from "../../dal/report";
 import YieldCell from "./YieldCell";
 import PriceCell from "./PriceCell";
+import BuyCell from "./BuyCell";
 
 const columns: ColumnsType<IReportRow> = [
   {
@@ -56,30 +57,15 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Aether / Hour",
     dataIndex: "aether_hour",
+    render: (value: number) => {
+      return <>{value.toFixed(2)}</>;
+    },
   },
   {
     title: "Buy",
     dataIndex: "sales",
-    render: (
-      value: Array<SaleSummary> = [],
-      _record: IReportRow
-    ): JSX.Element => {
-      return (
-        <>
-          {value.map((sale) => (
-            <div key={sale.sale_id}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}
-              >
-                {sale.sale_id}
-              </a>
-            </div>
-          ))}
-        </>
-      );
-    },
+    width: "20%",
+    render: (value: any, record: IReportRow) => <BuyCell row={record} />,
   },
 ];
 

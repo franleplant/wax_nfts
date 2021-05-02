@@ -70,7 +70,6 @@ export function useSales(options?: IOptions): UseQueryResult<Array<Sale>> {
         const idsPerPage = chunk(params.ids, 100);
         const salesPages = await Promise.all(
           idsPerPage.map((pageIds) => {
-            console.log("pageIds", pageIds);
             return api.getSales({ ...params, ids: pageIds }, 1, 100);
           })
         );
