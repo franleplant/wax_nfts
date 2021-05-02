@@ -1,23 +1,23 @@
-import fetch from "cross-fetch"
-import { useQuery, UseQueryResult } from "react-query"
-import { ExplorerApi } from "atomicassets"
-import { ApiAsset } from "atomicassets/build/API/Explorer/Types"
+import fetch from "cross-fetch";
+import { useQuery, UseQueryResult } from "react-query";
+import { ExplorerApi } from "atomicassets";
+import { ApiAsset } from "atomicassets/build/API/Explorer/Types";
 
-const URL = "https://wax.api.atomicassets.io"
-const NAMESPACE = "atomicassets"
-const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any })
+const URL = "https://wax.api.atomicassets.io";
+const NAMESPACE = "atomicassets";
+const api = new ExplorerApi(URL, NAMESPACE, { fetch: fetch as any });
 
-export { ApiAsset }
+export { ApiAsset };
 
 // TODO paging
 export function useAssets(): UseQueryResult<Array<ApiAsset>> {
   return useQuery<Array<ApiAsset>>({
     queryKey: `assets`,
     queryFn: async () => {
-      const assets = await api.getAssets()
-      return assets
+      const assets = await api.getAssets();
+      return assets;
     },
-  })
+  });
 }
 
 //export interface IAssetResult {

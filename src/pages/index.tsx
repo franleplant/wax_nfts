@@ -1,108 +1,88 @@
-import React, { useEffect, useState } from "react"
-import { PageProps, Link, graphql } from "gatsby"
-import { Card, Row, Col } from "antd"
-import SEO from "../components/seo"
-import { useGetMarketAll, IMarketData } from "../dal/market"
-import { getAetherInUSDT, getWaxInUSDT } from "../domain/market"
-import Layout from "../components/Layout"
-import Price from "../components/Price"
-import RateForm from "../components/RateForm"
-import AsyncManager from "../components/AsyncManager"
-import { useAssets, ApiAsset } from "../dal/atomic"
-import NFT from "../components/NFT"
-import { useSales, Sale } from "../dal/atomicmarket"
-import AssetSale from "../components/AssetSale"
-import APY from "../components/APY"
+import React from "react";
+import { PageProps, graphql } from "gatsby";
+import { Card, Row, Col } from "antd";
+import SEO from "../components/seo";
+import { useGetMarketAll, ICurrencyExchange } from "../dal/currency";
+import Layout from "../components/Layout";
+import RateForm from "../components/RateForm";
+import AsyncManager from "../components/AsyncManager";
+import APY from "../components/APY";
+import report from "../data/report.json";
+import { IReportRow } from "../dal/report";
+import Report from "../components/Report";
+import PricesTable from "../components/PricesTable";
+import moment from "moment";
 
 export interface IData {
-  data: {
-    site: {
-      buildTime: string
-    }
-  }
+  site: {
+    buildTime: string;
+  };
 }
 
-export default function Index(props: PageProps<IData>) {
+export default function Index(props: PageProps<IData>): JSX.Element {
   return (
     <Layout>
       <SEO />
-      <AsyncManager
-        queries={[
-          useGetMarketAll(),
-          useAssets(),
-          /*
-          useSales({
-            collection: "alien.worlds",
-            page: 1,
-            limit: 40,
-          }),
-           */
-        ]}
-      >
-        {([marketData, assets]) => (
-          <Content marketData={marketData} assets={assets} />
+      <AsyncManager queries={[useGetMarketAll()]}>
+        {([currencyExchange]) => (
+          <Content currencyExchange={currencyExchange} />
         )}
       </AsyncManager>
+      <p>
+        rendered on{" "}
+        {moment(props.data?.site?.buildTime).format("YYYY-MM-DD HH:mm")}
+      </p>
     </Layout>
-  )
+  );
 }
 
 function Content(props: {
-  marketData: Array<IMarketData>
-  assets: Array<ApiAsset>
+  currencyExchange: Array<ICurrencyExchange>;
 }): JSX.Element {
-  const aether = getAetherInUSDT(props.marketData) || 0
-  const wax = getWaxInUSDT(props.marketData)?.last_price || 0
+  // report comes with avg_price_wax as a string for some reason,
+  // in here we transform it at the earliest possible
+  const reportData: Array<IReportRow> = (report.report as Array<IReportRow>).map(
+    (r) => ({
+      ...r,
+      avg_price_wax: Number(r.avg_price_wax),
+    })
+  );
+
   return (
     <>
       <Row justify="start" gutter={5}>
-        <Col>
-          <Card bordered style={{ maxWidth: "350px" }} title={"Rates"}>
-            <Price price={aether} quoteLabel="AETHER" baseLabel="USDT" />
-            <Price price={wax} quoteLabel="WAX" baseLabel="USDT" />
-          </Card>
+        <Col sm={24} lg={9}>
+          <PricesTable currencyExchange={props.currencyExchange} />
         </Col>
+        {/*
         <Col>
           <Card
             bordered
             style={{ maxWidth: "350px" }}
             title={"Currency Converter"}
           >
-            <RateForm marketData={props.marketData} />
+            <RateForm currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
+          */}
         <Col>
           <Card bordered style={{ maxWidth: "350px" }} title={"APY"}>
-            <APY marketData={props.marketData} />
+            <APY currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
       </Row>
 
-      <h1>Sales</h1>
-      {/*
-      <Row gutter={10}>
-        {props.sales.map(sale => (
-          <Col>
-            <AssetSale key={sale.sale_id} sale={sale} />
-          </Col>
-        ))}
-      </Row>
-              */}
-      <Row gutter={10}>
-        {props.assets.map(asset => (
-          <Col>
-            <NFT key={asset.asset_id} asset={asset} />
-          </Col>
-        ))}
+      <Row>
+        <Report data={reportData} />
       </Row>
     </>
-  )
+  );
 }
 
 export const query = graphql`
   query buildTime {
     site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+      buildTime
     }
   }
-`
+`;

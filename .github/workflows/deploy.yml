@@ -15,6 +15,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
+
+    - name: Fetch latest report
+      run: |
+        yarn install --pure-lockfile
+        yarn get-report
+
     - uses: enriikke/gatsby-gh-pages-action@v2
       with:
         access-token: ${{ secrets.ACCESS_TOKEN }}

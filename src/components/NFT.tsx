@@ -1,13 +1,13 @@
-import React from "react"
-import { Card } from "antd"
-import { ApiAsset } from "../dal/atomic"
+import React from "react";
+import { Card } from "antd";
+import { ApiAsset } from "../dal/atomic";
 
 export interface IProps {
-  asset: ApiAsset
+  asset: ApiAsset;
 }
 
 export default function NFT(props: IProps): JSX.Element {
-  const { asset } = props
+  const { asset } = props;
 
   return (
     <Card
@@ -22,5 +22,5 @@ export default function NFT(props: IProps): JSX.Element {
         description={`collection ${asset.collection.name}`}
       ></Card.Meta>
     </Card>
-  )
+  );
 }

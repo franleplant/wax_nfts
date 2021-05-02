@@ -1,47 +1,37 @@
-import React, { useState } from "react"
-import { Button, Form, InputNumber } from "antd"
-import { ArrowDownOutlined } from "@ant-design/icons"
-import { IMarketData } from "../dal/market"
-import { getAetherInWax, getConverters, getWaxInUSDT } from "../domain/market"
+import React, { useState } from "react";
+import { Button, Form, InputNumber } from "antd";
+import { ICurrencyExchange } from "../dal/currency";
+import { convert, getAllInUSDT, Token } from "../domain/currency";
 
-export interface IForm {
-  aether: number
-  wax: number
-  usdt: number
-}
+export type IForm = Record<Token, number>;
 
 export interface IProps {
-  marketData: Array<IMarketData>
+  currencyExchange: Array<ICurrencyExchange>;
 }
 
 export default function RateForm(props: IProps): JSX.Element {
-  const { marketData } = props
-  const converters = getConverters(marketData)
+  const { currencyExchange } = props;
+  const rates = getAllInUSDT(currencyExchange);
 
-  const calcNewState: Record<keyof IForm, (newValue: number) => IForm> = {
-    aether: (aether): IForm => {
-      const wax = converters.aetherToWax(aether)
-      const usdt = converters.waxToUsdt(wax)
-      return { aether, wax, usdt }
-    },
-    wax: wax => {
-      const aether = converters.waxToAether(wax)
-      const usdt = converters.waxToUsdt(wax)
-      return { aether, wax, usdt }
-    },
-    usdt: usdt => {
-      const wax = converters.usdtToWax(usdt)
-      const aether = converters.waxToAether(wax)
-      return { aether, wax, usdt }
-    },
+  function calcNewState(tokenFrom: Token, newValue: number): IForm {
+    const valueInUsdt = rates[tokenFrom] * newValue;
+
+    const form = { [tokenFrom]: newValue } as IForm;
+    Object.values(Token)
+      .filter((tokenTo) => tokenTo !== tokenFrom)
+      .forEach((tokenTo) => {
+        form[tokenTo] = convert(valueInUsdt, tokenTo, rates);
+      });
+
+    return form;
   }
 
-  const [form, setForm] = useState<IForm>(calcNewState.usdt(1))
+  const [form, setForm] = useState<IForm>(calcNewState(Token.USDT, 1));
 
-  function onChange(currency: keyof IForm) {
+  function onChange(tokenFrom: Token) {
     return (newValue: number) => {
-      setForm(calcNewState[currency](newValue))
-    }
+      setForm(calcNewState(tokenFrom, newValue));
+    };
   }
 
   return (
@@ -50,7 +40,7 @@ export default function RateForm(props: IProps): JSX.Element {
         <InputNumber
           style={{ width: "100%" }}
           value={form.aether}
-          onChange={onChange("aether")}
+          onChange={onChange(Token.AETHER)}
           precision={9}
         />
       </Form.Item>
@@ -59,7 +49,7 @@ export default function RateForm(props: IProps): JSX.Element {
         <InputNumber
           style={{ width: "100%" }}
           value={form.wax}
-          onChange={onChange("wax")}
+          onChange={onChange(Token.WAX)}
           precision={9}
         />
       </Form.Item>
@@ -68,14 +58,17 @@ export default function RateForm(props: IProps): JSX.Element {
         <InputNumber
           style={{ width: "100%" }}
           value={form.usdt}
-          onChange={onChange("usdt")}
+          onChange={onChange(Token.USDT)}
           precision={9}
         />
       </Form.Item>
 
-      <Button htmlType="reset" onClick={() => setForm(calcNewState.usdt(1))}>
+      <Button
+        htmlType="reset"
+        onClick={() => setForm(calcNewState(Token.USDT, 1))}
+      >
         Reset
       </Button>
     </Form>
-  )
+  );
 }

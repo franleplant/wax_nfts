@@ -1,41 +1,21 @@
-import React, { useEffect, useState } from "react"
-import { Button, Form, InputNumber } from "antd"
-import { getAetherInUSDT, getWaxInUSDT } from "../domain/market"
-import { IMarketData } from "../dal/market"
+import React, { useState } from "react";
+import { Form, InputNumber } from "antd";
+import { getYield } from "../domain/currency";
+import { ICurrencyExchange } from "../dal/currency";
 
 export interface IForm {
   /** aether per wax per hour */
-  stakingRewardRatio: number
+  stakingRewardRatio: number;
 }
 
 export interface IProps {
-  marketData: Array<IMarketData>
+  currencyExchange: Array<ICurrencyExchange>;
 }
 
 export default function APY(props: IProps): JSX.Element {
-  const [form, setForm] = useState<IForm>({ stakingRewardRatio: 0.5 })
+  const [form, setForm] = useState<IForm>({ stakingRewardRatio: 0.5 });
 
-  const waxInUsdt = getWaxInUSDT(props.marketData)?.last_price || 0
-  const aetherInUsdt = getAetherInUSDT(props.marketData)
-
-  // The anualised percentage yield in usd dollars.
-  // A/W = stakingRewardRatio is in Aether / Wax
-  // U/A = aetherInUsdt is USDT / Aether
-  // U/W = waxInUsdt is  USDT / Wax
-  //
-  // A/W * U/A = U/W
-  //
-  // U/W / U/W = U/W * W/U = U/U (USDT rewards over USDT invested)
-  //
-  // And U/U is per hour, so to know the yearly value we need to multiple that
-  // for 24 * 365
-  //
-  // This is not compounded so a simple multiplication works,
-  // we will eventually work on an automatic compounding mechanism
-  // that will make this much more profitable
-  const hourlyYield = (form.stakingRewardRatio * aetherInUsdt) / waxInUsdt
-  console.log("hourly yield in dollars", hourlyYield)
-  const apy = hourlyYield * 24 * 365
+  const yield_ = getYield(props.currencyExchange, form.stakingRewardRatio);
 
   return (
     <Form>
@@ -43,16 +23,16 @@ export default function APY(props: IProps): JSX.Element {
         <InputNumber
           style={{ width: "100%" }}
           value={form.stakingRewardRatio}
-          onChange={stakingRewardRatio =>
-            setForm(prevState => ({ ...prevState, stakingRewardRatio }))
+          onChange={(stakingRewardRatio) =>
+            setForm((prevState) => ({ ...prevState, stakingRewardRatio }))
           }
           precision={9}
         />
       </Form.Item>
       <Form.Item label="APY in USD">
-        <p>{`${(apy * 100).toFixed(2)} %`}</p>
-        <p>{`${apy.toFixed(2)} x`}</p>
+        <p>{`${yield_.getApyFormatted()} %`}</p>
+        <p>{`${yield_.getXFormatted()} x`}</p>
       </Form.Item>
     </Form>
-  )
+  );
 }
