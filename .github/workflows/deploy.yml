@@ -1,12 +1,9 @@
-name: gatsby-publish
+name: deploy_merge
 
 on:
   push:
     branches:
       - develop
-      
-  schedule:
-    - cron: '*/2 * * * *'
 
 jobs:
   build:
