@@ -1,4 +1,4 @@
-import { meanBy, minBy, omit } from "lodash";
+import { maxBy, meanBy, minBy, omit } from "lodash";
 import { Sale as AMSale, SaleState } from "../dal/atomicmarket";
 import { IReportRow, SaleSummary, PriceFlat } from "../dal/report";
 
@@ -91,7 +91,7 @@ export function calcReportRow(
     minBy(activeSales, (sale) => sale.staking_price_ratio)
       ?.staking_price_ratio || 0;
   const max =
-    minBy(activeSales, (sale) => sale.staking_price_ratio)
+    maxBy(activeSales, (sale) => sale.staking_price_ratio)
       ?.staking_price_ratio || 0;
 
   return {
