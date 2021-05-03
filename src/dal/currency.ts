@@ -32,44 +32,16 @@ export interface ICurrencyExchange {
   changeWeek: number;
 }
 
-export interface ICoinGeckoData {
-  id: string;
-  symbol: string;
-  market_data: {
-    current_price: {
-      usd: number
-    }
-  }
-}
-
 export function useGetMarketAll(): UseQueryResult<Array<ICurrencyExchange>> {
-  const alcorUrl = "https://wax.alcor.exchange/api/markets";
-  
+  const url =
+    "https://lif-runtime.azurewebsites.net/api/api-currency?code=1XfeYeDioqx425pVQVcCc3QIPMxSjgTmRtWI6JzHmJpKZcpaHLAIyw==";
+
   return useQuery<Array<ICurrencyExchange>>({
     queryKey: `market`,
     queryFn: async () => {
-      const res = await fetch(alcorUrl);
-      const body = await res.json() as Array<ICurrencyExchange>;
-      await updateWaxPrice(body);
-      return body;
+      const res = await fetch(url);
+      const body = await res.json();
+      return body.rates;
     },
   });
 }
-
-/**
- * Obtain updated Wax price in USD and replace it in provided exchange 
- * @param exchange 
- */
-async function updateWaxPrice(exchange: Array<ICurrencyExchange>) {
-  const coinGeckoUrl = "https://api.coingecko.com/api/v3/coins/wax?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false";
-  const res = await fetch(coinGeckoUrl);
-  const coinGeckoData = await res.json() as ICoinGeckoData;
-  const waxPair = exchange.find(
-    ({ quote_token, base_token }) =>
-      quote_token.str === WAX && base_token.str === USDT
-  );
-  if (waxPair) {
-    waxPair.last_price = coinGeckoData.market_data.current_price.usd;
-  }
-}
-
