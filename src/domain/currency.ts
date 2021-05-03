@@ -1,10 +1,8 @@
 import moment from "moment";
-import { ICurrencyExchange } from "../dal/currency";
+import { ICurrencyExchange, WAX, USDT } from "../dal/currency";
 
 // The quote_token is the token being priced
 // in the base_token
-const USDT = "WAXUSDT@eth.token";
-const WAX = "WAX@eosio.token";
 const AETHER = "AETHER@e.rplanet";
 const WECANITE = "WECAN@e.rplanet";
 const ENEFTERIUM = "ENEFT@e.rplanet";
