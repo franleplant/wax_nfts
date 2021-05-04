@@ -24,25 +24,62 @@ const columns: ColumnsType<IReportRow> = [
     },
   },
   {
+    title: "template and name",
+    dataIndex: "template_id",
+    responsive: ["xs"],
+    render: (value: string, record): JSX.Element => {
+      return (
+        <dl>
+          <dt>template id</dt>
+          <dd>{record.template_id}</dd>
+
+          <dt>name</dt>
+          <dd>{record.name}</dd>
+        </dl>
+      );
+    },
+  },
+  {
+    title: "collection and schema",
+    dataIndex: "template_id",
+    responsive: ["xs"],
+    render: (value: string, record): JSX.Element => {
+      return (
+        <dl>
+          <dt>schema</dt>
+          <dd>{record.schema}</dd>
+
+          <dt>collection</dt>
+          <dd>{record.collection}</dd>
+        </dl>
+      );
+    },
+  },
+  {
     title: "Template",
     dataIndex: "template_id",
+    responsive: ["md"],
   },
   {
     title: "Name",
     dataIndex: "name",
+    responsive: ["md"],
     //key: 'age',
   },
   {
     title: "Collection",
     dataIndex: "collection",
+    responsive: ["md"],
   },
   {
     title: "Schema",
     dataIndex: "schema",
+    responsive: ["md"],
   },
   {
     title: "Count",
     dataIndex: "count",
+    responsive: ["md"],
   },
   {
     title: "Avg Price (WAX)",
@@ -50,16 +87,26 @@ const columns: ColumnsType<IReportRow> = [
     render: (priceWax: number, record) => <PriceCell row={record} />,
   },
   {
-    title: "Yield",
-    dataIndex: "avg_staking_price_ratio",
-    render: (_value, record) => <YieldCell row={record} />,
+    title: "Aether / Hour",
+    dataIndex: "aether_hour",
+    responsive: ["md"],
+    render: (value: number): JSX.Element => {
+      return <>{value.toFixed(2)}</>;
+    },
   },
   {
     title: "Aether / Hour",
     dataIndex: "aether_hour",
+    responsive: ["xs"],
     render: (value: number): JSX.Element => {
-      return <>{value.toFixed(2)}</>;
+      return <>{`${value.toFixed(2)} aeth / hour`}</>;
     },
+  },
+  {
+    title: "Yield",
+    dataIndex: "avg_staking_price_ratio",
+    className: "yield",
+    render: (_value, record) => <YieldCell row={record} />,
   },
   {
     title: "Buy",

@@ -1,0 +1,37 @@
+@media (max-width: 576px) {
+  .lif-report table {
+    display: block;
+  }
+
+  .lif-report .ant-table-thead {
+    display: none;
+  }
+
+  .lif-report .ant-table-tbody {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+  }
+
+  .lif-report .ant-table-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    background: #fafafa;
+    text-align: center;
+  }
+
+  .lif-report .ant-table-cell {
+    border: 0;
+  }
+
+  .lif-report .yield {
+    flex: 0 0 100%;
+  }
+}

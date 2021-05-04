@@ -7,6 +7,7 @@ import columns from "./columns";
 import { useGetMarketAll } from "../../dal/currency";
 import CurrencyExchangeContext from "./CurrencyExchangeContext";
 import { useSales, Sale } from "../../dal/atomicmarket";
+import "./styles.css";
 
 export interface IProps {
   data: Array<IReportRow>;
@@ -40,18 +41,20 @@ export default function Report(props: IProps): JSX.Element {
   ////console.log("updated", dataSource[0]);
 
   return (
-    <CurrencyExchangeContext.Provider value={currencyExchange || []}>
-      <Table<IReportRow>
-        size={"small"}
-        dataSource={dataSource}
-        columns={columns}
-        style={{ width: "100%" }}
-        rowKey={"template_id"}
-        pagination={{
-          defaultPageSize: 100,
-        }}
-      />
-    </CurrencyExchangeContext.Provider>
+    <div className="lif-report">
+      <CurrencyExchangeContext.Provider value={currencyExchange || []}>
+        <Table<IReportRow>
+          size={"small"}
+          dataSource={dataSource}
+          columns={columns}
+          style={{ width: "100%" }}
+          rowKey={"template_id"}
+          pagination={{
+            defaultPageSize: 100,
+          }}
+        />
+      </CurrencyExchangeContext.Provider>
+    </div>
   );
 }
 
