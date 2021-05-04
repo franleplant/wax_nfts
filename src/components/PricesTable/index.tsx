@@ -12,6 +12,7 @@ import WECAN_ICON from "../../images/TOKEN_WECAN.png";
 import RateCell from "./RateCell";
 import RateHead from "./RateHead";
 import RateContext, { IRateContext, IForm } from "./RateContext";
+import "./styles.css";
 
 const Icons: Record<Token, string> = {
   usdt: USDT_ICON,
@@ -59,43 +60,45 @@ export default function PricesTable(props: IProps): JSX.Element {
   } as IRateContext;
 
   return (
-    <RateContext.Provider value={context}>
-      <Table<IRow>
-        size={"small"}
-        pagination={false}
-        dataSource={dataSource}
-        rowKey="label"
-        columns={[
-          {
-            title: "Token",
-            dataIndex: "label",
-            render: (label: string, row) => {
-              return (
-                <div>
-                  <img
-                    src={row.icon}
-                    style={{ width: "15px", marginRight: "5px" }}
-                  />
-                  {label}
-                </div>
-              );
+    <div className="lif-prices">
+      <RateContext.Provider value={context}>
+        <Table<IRow>
+          size={"small"}
+          pagination={false}
+          dataSource={dataSource}
+          rowKey="label"
+          columns={[
+            {
+              title: "Token",
+              dataIndex: "label",
+              render: (label: string, row) => {
+                return (
+                  <div>
+                    <img
+                      src={row.icon}
+                      style={{ width: "15px", marginRight: "5px" }}
+                    />
+                    {label}
+                  </div>
+                );
+              },
             },
-          },
-          {
-            title: "Price",
-            dataIndex: "price",
-            render: (value: number) => {
-              return <span>{priceFormatter.format(value)}</span>;
+            {
+              title: "Price",
+              dataIndex: "price",
+              render: (value: number) => {
+                return <span>{priceFormatter.format(value)}</span>;
+              },
             },
-          },
-          {
-            title: () => <RateHead />,
-            dataIndex: "price",
-            render: (_value: number, row) => <RateCell row={row} />,
-          },
-        ]}
-      />
-    </RateContext.Provider>
+            {
+              title: () => <RateHead />,
+              dataIndex: "price",
+              render: (_value: number, row) => <RateCell row={row} />,
+            },
+          ]}
+        />
+      </RateContext.Provider>
+    </div>
   );
 }
 

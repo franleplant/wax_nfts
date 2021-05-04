@@ -50,8 +50,8 @@ function Content(props: {
 
   return (
     <>
-      <Row justify="start" gutter={5}>
-        <Col sm={24} lg={9}>
+      <Row justify="start">
+        <Col xs={24} sm={24} lg={9} style={{ width: "100%" }}>
           <PricesTable currencyExchange={props.currencyExchange} />
         </Col>
         {/*
@@ -64,12 +64,12 @@ function Content(props: {
             <RateForm currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
-          */}
         <Col>
           <Card bordered style={{ maxWidth: "350px" }} title={"APY"}>
             <APY currencyExchange={props.currencyExchange} />
           </Card>
         </Col>
+          */}
       </Row>
 
       <Row>

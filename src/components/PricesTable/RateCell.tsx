@@ -13,7 +13,7 @@ export default function RateCell({ row }: IProps): JSX.Element {
   return (
     <InputNumber
       size={"small"}
-      style={{ width: "200px" }}
+      style={{ width: "100%" }}
       value={ctx.form?.[row.label]}
       onChange={ctx.onChange(row.label)}
       precision={9}
