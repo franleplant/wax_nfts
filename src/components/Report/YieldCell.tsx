@@ -26,6 +26,8 @@ export default function YieldCell(props: IProps): JSX.Element {
       <div>{`avg APY ${avgYield.getApyFormatted()} %`}</div>
       <div>{`min APY ${minYield.getApyFormatted()} - max APY ${maxYield.getApyFormatted()}`}</div>
       <div>{`avg hourly yield ${avgYield.getHpyFormatted()} %`}</div>
+      <div>{`avg aeth hour / wax ${avg}`}</div>
+      <div>{`avg wax / aeth hour ${1 / avg}`}</div>
       <div>{`you will ${avgYield.getXFormatted()} x your capital in a year`}</div>
       <div>{`roi ${avgYield.getRoiFormatted()}`}</div>
     </div>

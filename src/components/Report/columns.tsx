@@ -4,6 +4,8 @@ import { IReportRow } from "../../dal/report";
 import YieldCell from "./YieldCell";
 import PriceCell from "./PriceCell";
 import BuyCell from "./BuyCell";
+import DataCell from "./DataCell";
+import { pick } from "lodash";
 
 const columns: ColumnsType<IReportRow> = [
   {
@@ -113,6 +115,13 @@ const columns: ColumnsType<IReportRow> = [
     dataIndex: "sales",
     width: "20%",
     render: (value: any, record: IReportRow) => <BuyCell row={record} />,
+  },
+  {
+    title: "Data",
+    width: "100px",
+    dataIndex: "immutable_data",
+    responsive: ["md"],
+    render: (value: any, record: IReportRow) => <DataCell row={record} />,
   },
 ];
 

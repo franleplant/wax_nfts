@@ -180,7 +180,8 @@ export class Yield {
   }
 
   getRoiFormatted(): string {
-    return moment.duration(this.roi, "hours").humanize();
+    const months = moment.duration(this.roi, "hours").asMonths();
+    return `${months.toFixed(2)} months`;
   }
 }
 
