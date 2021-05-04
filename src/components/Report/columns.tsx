@@ -5,7 +5,6 @@ import YieldCell from "./YieldCell";
 import PriceCell from "./PriceCell";
 import BuyCell from "./BuyCell";
 import DataCell from "./DataCell";
-import { pick } from "lodash";
 
 const columns: ColumnsType<IReportRow> = [
   {
@@ -29,7 +28,7 @@ const columns: ColumnsType<IReportRow> = [
     title: "template and name",
     dataIndex: "template_id",
     responsive: ["xs"],
-    render: (value: string, record): JSX.Element => {
+    render: (value: string, record: IReportRow): JSX.Element => {
       return (
         <dl>
           <dt>template id</dt>
@@ -45,7 +44,7 @@ const columns: ColumnsType<IReportRow> = [
     title: "collection and schema",
     dataIndex: "template_id",
     responsive: ["xs"],
-    render: (value: string, record): JSX.Element => {
+    render: (value: string, record: IReportRow): JSX.Element => {
       return (
         <dl>
           <dt>schema</dt>
