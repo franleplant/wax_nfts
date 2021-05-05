@@ -22,16 +22,16 @@ export interface IData {
 export default function Index(props: PageProps<IData>): JSX.Element {
   return (
     <Layout>
+      <p style={{ fontSize: "10px" }}>
+        rendered on{" "}
+        {moment(props.data?.site?.buildTime).format("YYYY-MM-DD HH:mm")}
+      </p>
       <SEO />
       <AsyncManager queries={[useGetMarketAll()]}>
         {([currencyExchange]) => (
           <Content currencyExchange={currencyExchange} />
         )}
       </AsyncManager>
-      <p>
-        rendered on{" "}
-        {moment(props.data?.site?.buildTime).format("YYYY-MM-DD HH:mm")}
-      </p>
     </Layout>
   );
 }
