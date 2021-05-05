@@ -16,12 +16,14 @@ export default function PriceCell(props: IProps): JSX.Element {
   let rarityEl = null;
   if (rarity) {
     rarityEl = (
-      <Tag
-        color="orange"
-        style={{ overflow: "hidden", textOverflow: "ellipsis" }}
-      >
-        {rarity}
-      </Tag>
+      <Tooltip title="rarity" trigger={trigger}>
+        <Tag
+          color="orange"
+          style={{ overflow: "hidden", textOverflow: "ellipsis" }}
+        >
+          {rarity}
+        </Tag>
+      </Tooltip>
     );
   }
   return (
