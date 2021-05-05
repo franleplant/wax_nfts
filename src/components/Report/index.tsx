@@ -17,11 +17,11 @@ export default function Report(_props: IProps): JSX.Element {
   const [pure, setPure] = useState(false);
   const { data: currencyExchange } = useGetMarketAll();
 
-  const { data: report = [], isFetching: reportIsLoading } = useGetReport();
+  const { data: report = [], isLoading: reportIsLoading } = useGetReport();
 
   const saleIds = useSaleIds(report);
 
-  const { data: updatedSales, isFetching: salesIsLoading } = useSales({
+  const { data: updatedSales, isLoading: salesIsLoading } = useSales({
     params: { ids: saleIds },
     queryOptions: {
       refetchInterval: 2 * 60 * 1000,
@@ -42,10 +42,7 @@ export default function Report(_props: IProps): JSX.Element {
           <Switch checked={pure} onChange={() => setPure((pure) => !pure)} />
         </div>
         <div className="report-controls__item">
-          Report{" "}
-          <Spin
-            style={{ visibility: reportIsLoading ? "hidden" : undefined }}
-          />
+          Report {reportIsLoading ? <Spin /> : null}
         </div>
         <div className="report-controls__item">
           Sales {salesIsLoading ? <Spin /> : null}
@@ -54,6 +51,10 @@ export default function Report(_props: IProps): JSX.Element {
       <CurrencyExchangeContext.Provider value={currencyExchange || []}>
         <Table<IReportRow>
           size={"small"}
+          // we want to block the table when sales
+          // are loading because that's what going to
+          // verify what sales are still open
+          loading={salesIsLoading}
           dataSource={dataSource}
           columns={columns}
           style={{ width: "100%" }}

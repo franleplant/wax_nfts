@@ -46,6 +46,7 @@ export function useGetReport(): UseQueryResult<Array<IReportRow>> {
       return normalizeReport(reportWrapper).report;
     },
     initialData: normalizeReport(buildTimeReport as IReportWrapper).report,
+    refetchInterval: 2 * 60 * 1000,
   });
 }
 
