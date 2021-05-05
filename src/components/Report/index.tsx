@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Table } from "antd";
 import { keyBy } from "lodash";
 import { IReportRow } from "../../dal/report";
@@ -33,12 +33,16 @@ export default function Report(props: IProps): JSX.Element {
   });
   //console.log("updatedSales", updatedSales);
 
-  const dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
+  let dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
   //console.log("updated", dataSource2[0]);
   //const dataSource = dataSource2;
   ////const dataSource = report;
   //console.log("report index");
   ////console.log("updated", dataSource[0]);
+  const params = useQueryParams();
+  if (params.pure) {
+    dataSource = report;
+  }
 
   return (
     <div className="lif-report">
@@ -56,6 +60,25 @@ export default function Report(props: IProps): JSX.Element {
       </CurrencyExchangeContext.Provider>
     </div>
   );
+}
+
+export interface IQueryParams {
+  pure?: boolean;
+}
+
+export function useQueryParams(): IQueryParams {
+  const [params, setParams] = useState<IQueryParams>({});
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    const newParams = new URLSearchParams(document.location.search);
+    const newPure = newParams.get("pure") === "true";
+    if (params.pure !== newPure) {
+      setParams((prev) => ({ ...prev, pure: newPure }));
+    }
+  });
+
+  return params;
 }
 
 export function useSaleIds(report: Array<IReportRow>): Array<number> {
