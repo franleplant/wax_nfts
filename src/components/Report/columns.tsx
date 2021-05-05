@@ -6,25 +6,16 @@ import PriceCell from "./PriceCell";
 import BuyCell from "./BuyCell";
 import DataCell from "./DataCell";
 import DetailsMobileCell from "./DetailsMobileCell";
+import ImgCell from "./ImgCell";
 
 const columns: ColumnsType<IReportRow> = [
   {
     title: "NFT",
     dataIndex: "immutable_data",
     className: "image",
-    render: (data: any): JSX.Element => {
-      const img = data.img;
-      let isUrl = true;
-      try {
-        new URL(img);
-      } catch (err) {
-        isUrl = false;
-      }
-
-      const url = isUrl ? img : `https://ipfs.io/ipfs/${img}`;
-
-      return <img src={url} style={{ width: "100px" }} />;
-    },
+    render: (_data: unknown, record: IReportRow): JSX.Element => (
+      <ImgCell row={record} />
+    ),
   },
   {
     title: "details",
