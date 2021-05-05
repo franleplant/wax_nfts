@@ -55,12 +55,8 @@ export function useSales(options?: IOptions): UseQueryResult<Array<Sale>> {
   const { page, limit, queryOptions, batchFetchPages, batchMaxPages = 100 } =
     options || {};
 
-  //const queryClient = useQueryClient();
-  const queryKey = `sales`;
-
-  // TODO batch
   return useQuery<Array<Sale>>({
-    queryKey,
+    queryKey: [`sales`, { saleIds: params.ids }],
     queryFn: async () => {
       // TODO probably this should be in another query custom hook
       // and query key, etc

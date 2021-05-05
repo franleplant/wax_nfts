@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Table } from "antd";
+import { Table, Spin, Switch } from "antd";
 import { keyBy } from "lodash";
-import { IReportRow } from "../../dal/report";
+import { IReportRow, useGetReport } from "../../dal/report";
 import { calcReportRow } from "../../domain/report";
 import columns from "./columns";
 import { useGetMarketAll } from "../../dal/currency";
@@ -9,77 +9,64 @@ import CurrencyExchangeContext from "./CurrencyExchangeContext";
 import { useSales, Sale } from "../../dal/atomicmarket";
 import "./styles.css";
 
-export interface IProps {
-  data: Array<IReportRow>;
-}
+export interface IProps {}
 
 const EMPTY_ARRAY: any = [];
 
-export default function Report(props: IProps): JSX.Element {
+export default function Report(_props: IProps): JSX.Element {
+  const [pure, setPure] = useState(false);
   const { data: currencyExchange } = useGetMarketAll();
 
-  const report = props.data;
-  //console.log("original", report[0]);
+  const { data: report = [], isLoading: reportIsLoading } = useGetReport();
 
   const saleIds = useSaleIds(report);
 
-  // TODO typeinformation is outdated
-  const { data: updatedSales } = useSales({
+  const { data: updatedSales, isLoading: salesIsLoading } = useSales({
     params: { ids: saleIds },
     queryOptions: {
       refetchInterval: 2 * 60 * 1000,
       refetchOnWindowFocus: false,
     },
   });
-  //console.log("updatedSales", updatedSales);
 
   let dataSource = useUpdateSales(report, updatedSales || EMPTY_ARRAY);
-  //console.log("updated", dataSource2[0]);
-  //const dataSource = dataSource2;
-  ////const dataSource = report;
-  //console.log("report index");
-  ////console.log("updated", dataSource[0]);
-  const params = useQueryParams();
-  if (params.pure) {
+  if (pure) {
     dataSource = report;
   }
 
   return (
     <div className="lif-report">
+      <div className="report-controls">
+        <div className="report-controls__item">
+          Pure Report
+          <Switch checked={pure} onChange={() => setPure((pure) => !pure)} />
+        </div>
+        <div className="report-controls__item">
+          Report {reportIsLoading ? <Spin /> : null}
+        </div>
+        <div className="report-controls__item">
+          Sales {salesIsLoading ? <Spin /> : null}
+        </div>
+      </div>
       <CurrencyExchangeContext.Provider value={currencyExchange || []}>
         <Table<IReportRow>
           size={"small"}
+          // we want to block the table when sales
+          // are loading because that's what going to
+          // verify what sales are still open
+          loading={salesIsLoading}
           dataSource={dataSource}
           columns={columns}
           style={{ width: "100%" }}
           rowKey={"template_id"}
           pagination={{
             defaultPageSize: 100,
-            showTotal: (total, range) => `${total} items`,
+            showTotal: (total, _range) => `${total} items`,
           }}
         />
       </CurrencyExchangeContext.Provider>
     </div>
   );
-}
-
-export interface IQueryParams {
-  pure?: boolean;
-}
-
-export function useQueryParams(): IQueryParams {
-  const [params, setParams] = useState<IQueryParams>({});
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  useEffect(() => {
-    const newParams = new URLSearchParams(document.location.search);
-    const newPure = newParams.get("pure") === "true";
-    if (params.pure !== newPure) {
-      setParams((prev) => ({ ...prev, pure: newPure }));
-    }
-  });
-
-  return params;
 }
 
 export function useSaleIds(report: Array<IReportRow>): Array<number> {
@@ -96,7 +83,6 @@ export function useSaleIds(report: Array<IReportRow>): Array<number> {
   return saleIds;
 }
 
-// TODO recalc ratios apy etyc
 export function useUpdateSales(
   report: Array<IReportRow>,
   updatedSales: Array<Sale>
