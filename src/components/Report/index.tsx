@@ -55,6 +55,7 @@ export default function Report(props: IProps): JSX.Element {
           rowKey={"template_id"}
           pagination={{
             defaultPageSize: 100,
+            showTotal: (total, range) => `${total} items`,
           }}
         />
       </CurrencyExchangeContext.Provider>
