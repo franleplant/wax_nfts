@@ -85,6 +85,7 @@ const columns: ColumnsType<IReportRow> = [
   {
     title: "Avg Price (WAX)",
     dataIndex: "avg_price_wax",
+    className: "price",
     render: (priceWax: number, record) => <PriceCell row={record} />,
   },
   {
@@ -99,6 +100,7 @@ const columns: ColumnsType<IReportRow> = [
     title: "Aether / Hour",
     dataIndex: "aether_hour",
     responsive: ["xs"],
+    className: "aether_hour",
     render: (value: number): JSX.Element => {
       return <>{`${value.toFixed(2)} aeth / hour`}</>;
     },

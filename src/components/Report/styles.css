@@ -34,4 +34,15 @@
   .lif-report .yield {
     flex: 0 0 100%;
   }
+
+  .lif-report .price {
+    font-weight: bold;
+  font-size: 18px;
+    flex: 0 0 50%;
+  }
+  .lif-report .aether_hour {
+    font-weight: bold;
+  font-size: 18px;
+    flex: 0 0 50%;
+  }
 }
