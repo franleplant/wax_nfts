@@ -5,11 +5,13 @@ import YieldCell from "./YieldCell";
 import PriceCell from "./PriceCell";
 import BuyCell from "./BuyCell";
 import DataCell from "./DataCell";
+import DetailsMobileCell from "./DetailsMobileCell";
 
 const columns: ColumnsType<IReportRow> = [
   {
     title: "NFT",
     dataIndex: "immutable_data",
+    className: "image",
     render: (data: any): JSX.Element => {
       const img = data.img;
       let isUrl = true;
@@ -25,37 +27,30 @@ const columns: ColumnsType<IReportRow> = [
     },
   },
   {
-    title: "template and name",
+    title: "details",
     dataIndex: "template_id",
     responsive: ["xs"],
-    render: (value: string, record: IReportRow): JSX.Element => {
-      return (
-        <dl>
-          <dt>template id</dt>
-          <dd>{record.template_id}</dd>
-
-          <dt>name</dt>
-          <dd>{record.name}</dd>
-        </dl>
-      );
-    },
+    className: "details",
+    render: (value: string, record: IReportRow): JSX.Element => (
+      <DetailsMobileCell row={record} />
+    ),
   },
-  {
-    title: "collection and schema",
-    dataIndex: "template_id",
-    responsive: ["xs"],
-    render: (value: string, record: IReportRow): JSX.Element => {
-      return (
-        <dl>
-          <dt>schema</dt>
-          <dd>{record.schema}</dd>
+  //{
+  //title: "collection and schema",
+  //dataIndex: "template_id",
+  //responsive: ["xs"],
+  //render: (value: string, record: IReportRow): JSX.Element => {
+  //return (
+  //<dl>
+  //<dt>schema</dt>
+  //<dd>{record.schema}</dd>
 
-          <dt>collection</dt>
-          <dd>{record.collection}</dd>
-        </dl>
-      );
-    },
-  },
+  //<dt>collection</dt>
+  //<dd>{record.collection}</dd>
+  //</dl>
+  //);
+  //},
+  //},
   {
     title: "Template",
     dataIndex: "template_id",
