@@ -1,12 +1,12 @@
 import React from "react";
 import { PageProps, graphql } from "gatsby";
-import { Card, Row, Col } from "antd";
+import { Row, Col } from "antd";
 import SEO from "../components/seo";
 import { useGetMarketAll, ICurrencyExchange } from "../dal/currency";
 import Layout from "../components/Layout";
-import RateForm from "../components/RateForm";
+//import RateForm from "../components/RateForm";
 import AsyncManager from "../components/AsyncManager";
-import APY from "../components/APY";
+//import APY from "../components/APY";
 import report from "../data/report.json";
 import { IReportRow } from "../dal/report";
 import Report from "../components/Report";
@@ -22,16 +22,16 @@ export interface IData {
 export default function Index(props: PageProps<IData>): JSX.Element {
   return (
     <Layout>
+      <p style={{ fontSize: "10px" }}>
+        rendered on{" "}
+        {moment(props.data?.site?.buildTime).format("YYYY-MM-DD HH:mm")}
+      </p>
       <SEO />
       <AsyncManager queries={[useGetMarketAll()]}>
         {([currencyExchange]) => (
           <Content currencyExchange={currencyExchange} />
         )}
       </AsyncManager>
-      <p>
-        rendered on{" "}
-        {moment(props.data?.site?.buildTime).format("YYYY-MM-DD HH:mm")}
-      </p>
     </Layout>
   );
 }

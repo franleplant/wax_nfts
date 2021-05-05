@@ -1,4 +1,10 @@
 @media (max-width: 576px) {
+  .lif-report {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
   .lif-report table {
     display: block;
   }
@@ -20,18 +26,47 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 4px;
 
     border-bottom: 5px solid black;
     border-top: 5px solid black;
     background: #fafafa;
     text-align: center;
+    padding: 8px;
   }
 
   .lif-report .ant-table-cell {
     border: 0;
+    padding: 0 !important;
+  }
+
+  .lif-report .image,
+  .lif-report .details {
+    flex: 0 0 49%;
+    overflow: hidden;
+  }
+
+  .lif-report .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .lif-report .details .ant-tag {
+    display: block;
+    margin: 0;
+    /*width: 100%;*/
+    /*max-width: 100%;*/
   }
 
   .lif-report .yield {
     flex: 0 0 100%;
+  }
+
+  .lif-report .price,
+  .lif-report .aether_hour {
+    font-weight: bold;
+    font-size: 16px;
+    flex: 0 0 49%;
   }
 }
