@@ -70,3 +70,18 @@
     flex: 0 0 49%;
   }
 }
+
+.report-controls {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  gap: 50px;
+  padding: 10px;
+}
+
+.report-controls__item {
+  min-width: 100px;
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+}
