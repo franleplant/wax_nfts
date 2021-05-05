@@ -84,7 +84,9 @@ export function Stat(props: IStatProps): JSX.Element {
 
   return (
     <Tooltip trigger={trigger} title={props.title}>
-      <div title={props.title}>{props.children}</div>
+      <div className={props.className} title={props.title}>
+        {props.children}
+      </div>
     </Tooltip>
   );
 }
