@@ -30,11 +30,11 @@ export default function YieldCell(props: IProps): JSX.Element {
           {`hpy ${avgYield.getHpyFormatted()} %`}
         </Stat>
 
-        <Stat title="Average Reward to Price Ratio (RPR), the aether per hour that the asset generates divided by the average wax price">
+        <Stat title="Average Reward to Price Ratio (RPR): aether per hour that the asset generates divided by average wax price">
           {`rpr ${avg.toFixed(2)}`}
         </Stat>
 
-        <Stat title="Average Reward to Price Ratio (RPR), the aether per hour that the asset generates divided by the average wax price">
+        <Stat title="Average Price to Reward Ratio (PRR): average wax price divided by aether per hour that the asset generates">
           {`prr ${(1 / avg).toFixed(2)}`}
         </Stat>
       </div>
