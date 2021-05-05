@@ -3,6 +3,7 @@ import { Tag } from "antd";
 import { IReportRow } from "../../dal/report";
 import CurrencyExchangeContext from "./CurrencyExchangeContext";
 import { getWaxInUSDT } from "../../domain/currency";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 // TODO abstract?
 const priceFormatter = new Intl.NumberFormat("en-US", {
@@ -32,7 +33,7 @@ export default function BuyCell(props: IProps): JSX.Element {
           const priceUSDT = priceWax * waxInUSDT;
           return (
             <Tag key={sale.sale_id} color="magenta">
-              <a
+              <OutboundLink
                 target="_blank"
                 rel="noreferrer"
                 href={`https://wax.atomichub.io/market/sale/${sale.sale_id}`}
@@ -41,7 +42,7 @@ export default function BuyCell(props: IProps): JSX.Element {
                 {`${priceWax.toFixed(2)} wax (${priceFormatter.format(
                   priceUSDT
                 )})`}
-              </a>
+              </OutboundLink>
             </Tag>
           );
         })}
